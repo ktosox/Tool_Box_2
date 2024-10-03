@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1727946911
+::res://::1727973932
 icon.svg::CompressedTexture2D::7802026146543343258::1727379147::1727379156::1::::<><>::
 LICENSE.md::TextFile::-1::1727462415::0::1::::<><>::
 README.md::TextFile::-1::1727462415::0::1::::<><>::
@@ -10,10 +10,15 @@ puppet.tscn::PackedScene::4996960929297467656::1727637119::0::1::::<><>::res://c
 side_view_test.tscn::PackedScene::7520769342137988754::1727637136::0::1::::<><>::uid://cdgthmg8dm5c3::::res://controllers/Simple_2D_side/puppet.tscn
 ::res://controllers/Simple_2D_top/::1727462057
 ::res://examples/::1727472191
-::res://experimental/::1727943415
-hit_box.tscn::PackedScene::1156614527166264576::1727942629::0::1::::<><>::
-side_view_tower_defense.gd::GDScript::-1::1727942706::0::1::::<>Node2D<>::
-side_view_tower_defense.tscn::PackedScene::46318386444278304::1727943415::0::1::::<><>::res://experimental/side_view_tower_defense.gd<>uid://qqjji0wexgsm::::res://experimental/hit_box.tscn
+::res://experimental/::1727962552
+attack_data.gd::GDScript::-1::1727962337::0::1::::AttackData<>Resource<>::
+attack_simulator.gd::GDScript::-1::1727962444::0::1::::<>RayCast2D<>::
+attack_simulator.tscn::PackedScene::3787105180709322997::1727962539::0::1::::<><>::res://experimental/attack_simulator.gd<>res://experimental/attack_data.gd
+hit_box.gd::GDScript::-1::1727959745::0::1::::<>Area2D<>::
+hit_box.tscn::PackedScene::1156614527166264576::1727962539::0::1::::<><>::res://experimental/hit_box.gd
+side_view_tower_defense.gd::GDScript::-1::1727962523::0::1::::<>Node2D<>::
+side_view_tower_defense.tscn::PackedScene::46318386444278304::1727962552::0::1::::<><>::res://experimental/side_view_tower_defense.gd<>uid://qqjji0wexgsm::::res://experimental/hit_box.tscn<>uid://bt7rcl15kq3mn::::res://experimental/attack_simulator.tscn<>res://experimental/target_dummy.gd
+target_dummy.gd::GDScript::-1::1727962492::0::1::::<>Node2D<>::
 ::res://resources/::1727472544
 ::res://resources/fonts/::1678310235
 ::res://resources/fonts/Fibberish v1.0/::1727636854

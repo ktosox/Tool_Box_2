@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://bt7rcl15kq3mn"]
+
+[ext_resource type="Script" path="res://experimental/attack_simulator.gd" id="1_2axk2"]
+
+[node name="AttackSimulator" type="RayCast2D"]
+target_position = Vector2(-200, 0)
+collision_mask = 12
+collide_with_areas = true
+collide_with_bodies = false
+script = ExtResource("1_2axk2")
+
+[node name="Button" type="Button" parent="."]
+offset_left = -21.0
+offset_top = -52.0
+offset_right = 18.0
+offset_bottom = -21.0
+text = "fire!"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

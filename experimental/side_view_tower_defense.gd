@@ -2,14 +2,18 @@ extends Node2D
 
 # collision layers! - 3 for attacks   - 4 for targets
 
+var hits = 0.0
+
+var misses = 0.0
+func _ready() -> void:
+	randomize()
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	$RayCast2D.force_raycast_update()
-	print($RayCast2D.get_collider())
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func update_hit_rate(result : bool):
+	if result:
+		hits +=1
+	else:
+		misses += 1
+	
+	$Label2.text = str( hits/(hits + misses))
 	pass
