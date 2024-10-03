@@ -1,0 +1,6 @@
+res://experimental/side_view_tower_defense.tscn
+res://experimental/hit_box.tscn
+res://experimental/hit_box.gd
+res://experimental/side_view_tower_defense.gd
+res://experimental/attack_data.gd
+res://experimental/target_dummy.gd

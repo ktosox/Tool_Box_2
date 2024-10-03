@@ -4,14 +4,14 @@
  x                       from film direct by Michael Bay                        x                                               x 
  x                                                                              x                              
  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-    
+	
 
 Font name: TRANSFORMERS movie - Latin Decorative font (versione 1.0)
-         Tipo: True Type regular 
+		 Tipo: True Type regular 
 Type designer: P. A. Vannucci (Font Lab Studio 5.0)
 sito internet: www.alphabeType.it
-               www.paolo.arfelli.mclink.net/antares.htm
-       e.mail: vannucci@alphabetype.it
+			   www.paolo.arfelli.mclink.net/antares.htm
+	   e.mail: vannucci@alphabetype.it
 
 FREEWARE FONT for personal & professional use, by Alphabet & Type (r) (c)2009
 -----------------------------------------------------------------------------

@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://wo4e013s4ki"]
+
+[ext_resource type="Script" path="res://experimental/side_view_tower_defense.gd" id="1_lmps5"]
+[ext_resource type="PackedScene" uid="uid://qqjji0wexgsm" path="res://experimental/hit_box.tscn" id="1_n2rhh"]
+[ext_resource type="Script" path="res://experimental/target_dummy.gd" id="2_qppje"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pnjok"]
+size = Vector2(20, 40)
+
+[node name="SideViewTowerDefense" type="Node2D"]
+script = ExtResource("1_lmps5")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(-6, -80)
+collision_mask = 12
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="TargetDummy" type="Node2D" parent="."]
+script = ExtResource("2_qppje")
+
+[node name="HitBox" parent="TargetDummy" instance=ExtResource("1_n2rhh")]
+position = Vector2(0, -20)
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetDummy/HitBox"]
+shape = SubResource("RectangleShape2D_pnjok")
+
+[node name="Line2D" type="Line2D" parent="TargetDummy"]
+points = PackedVector2Array(0, 0, 0, -40)
+width = 20.0

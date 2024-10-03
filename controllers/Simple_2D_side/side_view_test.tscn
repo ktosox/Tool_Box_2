@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dffd8b68hbmh3"]
+
+[ext_resource type="PackedScene" uid="uid://cdgthmg8dm5c3" path="res://controllers/Simple_2D_side/puppet.tscn" id="1_km8p6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tprn2"]
+size = Vector2(600, 40)
+
+[node name="SideViewTest" type="Node2D"]
+
+[node name="Floor" type="StaticBody2D" parent="."]
+modulate = Color(0.466181, 0.466181, 0.466181, 1)
+position = Vector2(586, 616)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+shape = SubResource("RectangleShape2D_tprn2")
+
+[node name="Line2D" type="Line2D" parent="Floor"]
+points = PackedVector2Array(-300, 0, 300, 0)
+width = 40.0
+
+[node name="Puppet" parent="." instance=ExtResource("1_km8p6")]
+position = Vector2(582, 553)
