@@ -1,8 +1,7 @@
-res://experimental/floating_text.tscn
-res://experimental/floating_text.gd
+res://experimental/health_shower.tscn
+res://experimental/health_shower.gd
 res://experimental/side_view_tower_defense.tscn
-res://experimental/target_dummy.gd
-res://experimental/attack_data.gd
-res://experimental/attack_simulator.tscn
 res://experimental/hit_box.tscn
-res://experimental/side_view_tower_defense.gd
+res://experimental/floating_text.tscn
+res://experimental/attack_simulator.tscn
+res://experimental/target_dummy.gd
