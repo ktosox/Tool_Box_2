@@ -17,16 +17,21 @@ func _ready() -> void:
 
 func process_attack(data : AttackData, location : Vector2):
 	var new_floating_text = floating_text_scene.instantiate()
+	var reply = HitData.new()
 	if hit_calcualtion(dodge,data.accuracy) :
 		new_floating_text.text = str(data.damage)
 		health -= data.damage
 		$HealthShower.HP = health
 		emit_signal("attack_landed",true)
+		reply.result = 0
 	else:
+		reply.result = 1
 		new_floating_text.text = "miss"
 		emit_signal("attack_landed",false)
+	reply.damage_taken = data.damage
 	add_child(new_floating_text)
-	
+	if data.attack_source != null:
+		data.attack_source.attack_reply(reply)
 	pass
 
 func hit_calcualtion(dodge : float, accuracy : float) -> bool : # dodge vs accuracy - returns true on hit connecting

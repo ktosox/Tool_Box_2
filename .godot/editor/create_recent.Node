@@ -1,10 +1,12 @@
+Timer
+Node2D
+RayCast2D
+Marker2D
+Line2D
 Control
 Label
 AnimationPlayer
 Button
-RayCast2D
-Line2D
 CollisionShape2D
 Area2D
-Node2D
 StaticBody2D

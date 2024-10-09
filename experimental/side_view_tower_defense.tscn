@@ -1,19 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://wo4e013s4ki"]
+[gd_scene load_steps=7 format=3 uid="uid://wo4e013s4ki"]
 
 [ext_resource type="Script" path="res://experimental/side_view_tower_defense.gd" id="1_lmps5"]
 [ext_resource type="PackedScene" uid="uid://qqjji0wexgsm" path="res://experimental/hit_box.tscn" id="1_n2rhh"]
-[ext_resource type="PackedScene" uid="uid://bt7rcl15kq3mn" path="res://experimental/attack_simulator.tscn" id="2_bt61m"]
 [ext_resource type="Script" path="res://experimental/target_dummy.gd" id="2_qppje"]
-[ext_resource type="Script" path="res://experimental/attack_data.gd" id="3_43wi6"]
+[ext_resource type="PackedScene" uid="uid://dkn2kw0w413ys" path="res://experimental/example_gun.tscn" id="5_e4amm"]
 [ext_resource type="PackedScene" uid="uid://xtubqpb1avbh" path="res://experimental/health_shower.tscn" id="6_fpes2"]
-
-[sub_resource type="Resource" id="Resource_dwacq"]
-script = ExtResource("3_43wi6")
-damage = 5
-attakc_type = 0
-damage_type = 0
-penetration = 0
-accuracy = 1.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pnjok"]
 size = Vector2(20, 40)
@@ -21,14 +12,10 @@ size = Vector2(20, 40)
 [node name="SideViewTowerDefense" type="Node2D"]
 script = ExtResource("1_lmps5")
 
-[node name="AttackSimulator" parent="." instance=ExtResource("2_bt61m")]
-position = Vector2(471, 361)
-attack_data = SubResource("Resource_dwacq")
-
 [node name="TargetDummy" type="Node2D" parent="."]
-position = Vector2(327, 380)
+position = Vector2(326, 376)
 script = ExtResource("2_qppje")
-starting_health = -1
+starting_health = 20
 dodge = 0.2
 
 [node name="HitBox" parent="TargetDummy" instance=ExtResource("1_n2rhh")]
@@ -59,6 +46,9 @@ offset_left = 290.0
 offset_top = 79.0
 offset_right = 330.0
 offset_bottom = 102.0
+
+[node name="ExampleGun" parent="." instance=ExtResource("5_e4amm")]
+position = Vector2(535, 359)
 
 [connection signal="attack_landed" from="TargetDummy" to="." method="update_hit_rate"]
 [connection signal="attack_received" from="TargetDummy/HitBox" to="TargetDummy" method="process_attack"]

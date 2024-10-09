@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1abfq8f6fdig"]
+
+[ext_resource type="Script" path="res://experimental/example_gun_shot.gd" id="1_8ckwk"]
+[ext_resource type="Texture2D" uid="uid://onm5xeg5u5wu" path="res://resources/shader_particles/orb1.png" id="1_y8e3b"]
+
+[node name="ExampleGunShot" type="RayCast2D"]
+target_position = Vector2(-1600, 0)
+collision_mask = 12
+collide_with_areas = true
+collide_with_bodies = false
+script = ExtResource("1_8ckwk")
+
+[node name="Orb1" type="Sprite2D" parent="."]
+modulate = Color(0.760371, 0, 0.259756, 1)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("1_y8e3b")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
