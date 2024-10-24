@@ -8,7 +8,7 @@ var misses = 0.0
 func _ready() -> void:
 	randomize()
 
-# Called when the node enters the scene tree for the first time.
+
 func update_hit_rate(result : bool):
 	if result:
 		hits +=1

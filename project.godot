@@ -49,6 +49,13 @@ ui_down={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="DO NOT USE"
+2d_physics/layer_2="Player"
+2d_physics/layer_3="Wall"
+2d_physics/layer_4="Bullet"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

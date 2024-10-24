@@ -1,8 +1,9 @@
-res://experimental/example_gun.tscn
-res://experimental/example_gun.gd
-res://experimental/example_gun_shot.tscn
-res://experimental/example_gun_shot.gd
-res://experimental/hit_data.gd
-res://experimental/side_view_tower_defense.tscn
+res://experimental/side_view_tower_defense.gd
+res://controllers/Simple_2D_top/top_down_test.tscn
 res://experimental/attack_simulator.tscn
-res://experimental/target_dummy.gd
+res://experimental/example_gun.tscn
+res://experimental/example_gun_shot.tscn
+res://experimental/side_view_tower_defense.tscn
+res://controllers/Simple_2D_top/top_down_controller.tscn
+res://controllers/Simple_2D_top/top_down_controller.gd
+res://experimental/attack_simulator.gd

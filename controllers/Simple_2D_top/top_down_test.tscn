@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkx14ps7o33j5"]
+
+[ext_resource type="PackedScene" uid="uid://voyya5a5gnxq" path="res://controllers/Simple_2D_top/top_down_controller.tscn" id="1_ofykk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j1ca8"]
+size = Vector2(100, 100)
+
+[node name="TopDownTest" type="Node2D"]
+
+[node name="Wall" type="StaticBody2D" parent="."]
+position = Vector2(202, 239)
+collision_layer = 4
+collision_mask = 10
+
+[node name="Polygon2D" type="Polygon2D" parent="Wall"]
+polygon = PackedVector2Array(50, 50, 50, -50, -50, -50, -50, 50)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+shape = SubResource("RectangleShape2D_j1ca8")
+
+[node name="Wall2" type="StaticBody2D" parent="."]
+position = Vector2(815, 181)
+collision_layer = 4
+collision_mask = 10
+
+[node name="Polygon2D" type="Polygon2D" parent="Wall2"]
+polygon = PackedVector2Array(50, 50, 50, -50, -50, -50, -50, 50)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2"]
+shape = SubResource("RectangleShape2D_j1ca8")
+
+[node name="Wall3" type="StaticBody2D" parent="."]
+position = Vector2(646, 530)
+collision_layer = 4
+collision_mask = 10
+
+[node name="Polygon2D" type="Polygon2D" parent="Wall3"]
+polygon = PackedVector2Array(50, 50, 50, -50, -50, -50, -50, 50)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall3"]
+shape = SubResource("RectangleShape2D_j1ca8")
+
+[node name="TopDownController" parent="." instance=ExtResource("1_ofykk")]

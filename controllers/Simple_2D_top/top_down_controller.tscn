@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://voyya5a5gnxq"]
+
+[ext_resource type="Script" path="res://controllers/Simple_2D_top/top_down_controller.gd" id="1_khutk"]
+[ext_resource type="Texture2D" uid="uid://onm5xeg5u5wu" path="res://resources/shader_particles/orb1.png" id="2_nyls2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5y62g"]
+radius = 36.0
+
+[node name="TopDownController" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 4
+motion_mode = 1
+script = ExtResource("1_khutk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5y62g")
+
+[node name="Orb1" type="Sprite2D" parent="."]
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_nyls2")
