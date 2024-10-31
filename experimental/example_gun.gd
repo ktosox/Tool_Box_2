@@ -26,3 +26,8 @@ func _on_timer_timeout() -> void:
 	print("pew")
 	shoot()
 	pass # Replace with function body.
+
+
+func _on_button_pressed() -> void:
+	shoot()
+	pass # Replace with function body.

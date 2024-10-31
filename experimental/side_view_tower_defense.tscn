@@ -12,11 +12,14 @@ size = Vector2(20, 40)
 [node name="SideViewTowerDefense" type="Node2D"]
 script = ExtResource("1_lmps5")
 
+[node name="ExampleGun" parent="." instance=ExtResource("5_e4amm")]
+position = Vector2(535, 359)
+
 [node name="TargetDummy" type="Node2D" parent="."]
 position = Vector2(326, 376)
 script = ExtResource("2_qppje")
 starting_health = 20
-dodge = 0.2
+dodge = 0.8
 
 [node name="HitBox" parent="TargetDummy" instance=ExtResource("1_n2rhh")]
 position = Vector2(0, -20)
@@ -46,9 +49,6 @@ offset_left = 290.0
 offset_top = 79.0
 offset_right = 330.0
 offset_bottom = 102.0
-
-[node name="ExampleGun" parent="." instance=ExtResource("5_e4amm")]
-position = Vector2(535, 359)
 
 [connection signal="attack_landed" from="TargetDummy" to="." method="update_hit_rate"]
 [connection signal="attack_received" from="TargetDummy/HitBox" to="TargetDummy" method="process_attack"]

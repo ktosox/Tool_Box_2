@@ -1,4 +1,6 @@
 res://experimental/example_gun_shot.tscn
-res://experimental/example_gun.gd
-res://experimental/hit_data.gd
 res://experimental/example_gun_shot.gd
+res://experimental/side_view_tower_defense.tscn
+res://experimental/3D/texture_mapping_test.tscn
+res://experimental/example_gun.tscn
+res://experimental/example_gun.gd

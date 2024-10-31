@@ -25,6 +25,13 @@ position = Vector2(-66, 0)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.8
-autostart = true
+
+[node name="Button" type="Button" parent="."]
+offset_left = -36.0
+offset_top = -76.0
+offset_right = 16.0
+offset_bottom = -45.0
+text = "shoot"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
