@@ -6,6 +6,7 @@ var shot_scene = preload("res://experimental/example_gun_shot.tscn")
 
 
 func _ready() -> void:
+	
 	pass
 
 #func _on_button_pressed() -> void:

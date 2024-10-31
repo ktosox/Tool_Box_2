@@ -18,6 +18,12 @@ func send_attack():
 	pass
 
 func attack_reply(data : HitData):
+	#consider if the attack can now be consumed
+	#if not consumed -> move to next location (derived from HitData)
+	if data.result == HitData.ResultType.MISS:
+		print("shot missed, re-targeting")
+		send_attack()
+		return
 	print("shot reply got")
 	queue_free()
 	

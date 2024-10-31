@@ -2,6 +2,8 @@ extends Resource
 
 class_name HitData
 
-var result : int # connected / miss / block etc.
+@export var result : ResultType # connected / miss / block etc.
+
+enum ResultType {CONNECT, MISS, BLOCK}
 
 var damage_taken : int

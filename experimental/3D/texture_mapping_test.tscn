@@ -1,0 +1,88 @@
+[gd_scene load_steps=10 format=3 uid="uid://b5qbk8uioboqn"]
+
+[ext_resource type="Texture2D" uid="uid://c1r8lvfgwh2oy" path="res://experimental/3D/colors2.png" id="1_pltar"]
+
+[sub_resource type="Environment" id="Environment_svsu0"]
+background_mode = 1
+background_color = Color(0.707892, 0.608592, 0.478294, 1)
+ambient_light_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yk3lx"]
+albedo_texture = ExtResource("1_pltar")
+uv1_offset = Vector3(1, 1, 1)
+uv1_triplanar = true
+texture_filter = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_a1y73"]
+material = SubResource("StandardMaterial3D_yk3lx")
+
+[sub_resource type="Animation" id="Animation_cgysx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qsbpl"]
+resource_name = "new_animation"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4yhnf"]
+_data = {
+"RESET": SubResource("Animation_cgysx"),
+"new_animation": SubResource("Animation_qsbpl")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_on6xh"]
+albedo_texture = ExtResource("1_pltar")
+uv1_triplanar = true
+texture_filter = 2
+
+[sub_resource type="SphereMesh" id="SphereMesh_a0fhx"]
+material = SubResource("StandardMaterial3D_on6xh")
+radial_segments = 16
+rings = 8
+
+[node name="TextureMappingTest" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_svsu0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_a1y73")
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.901)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node3D"]
+libraries = {
+"": SubResource("AnimationLibrary_4yhnf")
+}
+autoplay = "new_animation"
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_a0fhx")

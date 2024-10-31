@@ -1,3 +1,8 @@
+MeshInstance3D
+AnimationPlayer
+Node3D
+Camera3D
+WorldEnvironment
 CollisionShape2D
 CharacterBody2D
 Polygon2D
@@ -7,8 +12,3 @@ Node2D
 RayCast2D
 Marker2D
 Line2D
-Control
-Label
-AnimationPlayer
-Button
-Area2D
