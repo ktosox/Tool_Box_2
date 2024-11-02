@@ -1,0 +1,80 @@
+[gd_scene load_steps=6 format=3 uid="uid://bke5odo8f6qx2"]
+
+[ext_resource type="Script" path="res://experimental/vam-pirate_ship-vivors_2/player_ship.gd" id="1_wrg1n"]
+[ext_resource type="Texture2D" uid="uid://onm5xeg5u5wu" path="res://resources/shader_particles/orb1.png" id="2_vfmk5"]
+[ext_resource type="Texture2D" uid="uid://d11ofdafmrw2k" path="res://resources/shader_particles/smoke2.png" id="3_wf3vw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nnxsf"]
+radius = 20.0
+height = 80.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ps0v5"]
+radius = 30.1496
+
+[node name="Game" type="Node2D"]
+
+[node name="PlayerShip" type="CharacterBody2D" parent="."]
+position = Vector2(383, 279)
+collision_layer = 2
+collision_mask = 4
+motion_mode = 1
+script = ExtResource("1_wrg1n")
+
+[node name="Orb1" type="Sprite2D" parent="PlayerShip"]
+scale = Vector2(0.225, 0.45)
+texture = ExtResource("2_vfmk5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerShip"]
+shape = SubResource("CapsuleShape2D_nnxsf")
+
+[node name="Camera2D" type="Camera2D" parent="PlayerShip"]
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+
+[node name="Rock" type="StaticBody2D" parent="."]
+position = Vector2(140, 443)
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rock"]
+shape = SubResource("CircleShape2D_ps0v5")
+
+[node name="Smoke2" type="Sprite2D" parent="Rock"]
+scale = Vector2(0.155, 0.155)
+texture = ExtResource("3_wf3vw")
+
+[node name="Rock2" type="StaticBody2D" parent="."]
+position = Vector2(279, 151)
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rock2"]
+shape = SubResource("CircleShape2D_ps0v5")
+
+[node name="Smoke2" type="Sprite2D" parent="Rock2"]
+scale = Vector2(0.155, 0.155)
+texture = ExtResource("3_wf3vw")
+
+[node name="Rock3" type="StaticBody2D" parent="."]
+position = Vector2(769, 185)
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rock3"]
+shape = SubResource("CircleShape2D_ps0v5")
+
+[node name="Smoke2" type="Sprite2D" parent="Rock3"]
+scale = Vector2(0.155, 0.155)
+texture = ExtResource("3_wf3vw")
+
+[node name="Rock4" type="StaticBody2D" parent="."]
+position = Vector2(921, 443)
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rock4"]
+shape = SubResource("CircleShape2D_ps0v5")
+
+[node name="Smoke2" type="Sprite2D" parent="Rock4"]
+scale = Vector2(0.155, 0.155)
+texture = ExtResource("3_wf3vw")

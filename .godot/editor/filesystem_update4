@@ -1,6 +1,6 @@
-res://experimental/example_gun_shot.tscn
-res://experimental/example_gun_shot.gd
-res://experimental/side_view_tower_defense.tscn
+res://experimental/vam-pirate_ship-vivors_2/game.tscn
 res://experimental/3D/texture_mapping_test.tscn
+res://experimental/side_view_tower_defense.tscn
 res://experimental/example_gun.tscn
-res://experimental/example_gun.gd
+res://experimental/example_gun_shot.tscn
+res://experimental/vam-pirate_ship-vivors_2/player_ship.gd
