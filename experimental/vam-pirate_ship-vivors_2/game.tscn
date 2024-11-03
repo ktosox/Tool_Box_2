@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bke5odo8f6qx2"]
+[gd_scene load_steps=7 format=3 uid="uid://bke5odo8f6qx2"]
 
 [ext_resource type="Script" path="res://experimental/vam-pirate_ship-vivors_2/player_ship.gd" id="1_wrg1n"]
 [ext_resource type="Texture2D" uid="uid://onm5xeg5u5wu" path="res://resources/shader_particles/orb1.png" id="2_vfmk5"]
@@ -7,6 +7,10 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nnxsf"]
 radius = 20.0
 height = 80.0
+
+[sub_resource type="Curve" id="Curve_80uqk"]
+_data = [Vector2(0, 0.340659), 0.0, 0.0, 0, 0, Vector2(0.715789, 0.0879121), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 3
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ps0v5"]
 radius = 30.1496
@@ -18,6 +22,7 @@ position = Vector2(383, 279)
 collision_layer = 2
 collision_mask = 4
 motion_mode = 1
+wall_min_slide_angle = 0.0872665
 script = ExtResource("1_wrg1n")
 
 [node name="Orb1" type="Sprite2D" parent="PlayerShip"]
@@ -29,7 +34,19 @@ shape = SubResource("CapsuleShape2D_nnxsf")
 
 [node name="Camera2D" type="Camera2D" parent="PlayerShip"]
 position_smoothing_enabled = true
-rotation_smoothing_enabled = true
+position_smoothing_speed = 4.0
+
+[node name="Front" type="Line2D" parent="PlayerShip"]
+position = Vector2(0, -11)
+scale = Vector2(0.545, 0.545)
+points = PackedVector2Array(0, 0, 0, -70, 0, -40)
+width = 30.0
+width_curve = SubResource("Curve_80uqk")
+default_color = Color(1, 0.427451, 0.356863, 1)
+
+[node name="Timer" type="Timer" parent="PlayerShip"]
+wait_time = 0.4
+autostart = true
 
 [node name="Rock" type="StaticBody2D" parent="."]
 position = Vector2(140, 443)
@@ -78,3 +95,5 @@ shape = SubResource("CircleShape2D_ps0v5")
 [node name="Smoke2" type="Sprite2D" parent="Rock4"]
 scale = Vector2(0.155, 0.155)
 texture = ExtResource("3_wf3vw")
+
+[connection signal="timeout" from="PlayerShip/Timer" to="PlayerShip" method="_on_timer_timeout"]
