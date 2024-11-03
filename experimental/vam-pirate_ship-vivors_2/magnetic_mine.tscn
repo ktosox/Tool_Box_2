@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://bnodi31vhdku8"]
+
+[ext_resource type="Texture2D" uid="uid://onm5xeg5u5wu" path="res://resources/shader_particles/orb1.png" id="1_76s70"]
+[ext_resource type="Script" path="res://experimental/vam-pirate_ship-vivors_2/magnetic_mine.gd" id="1_to0dv"]
+[ext_resource type="Texture2D" uid="uid://c143obm5gwo7d" path="res://resources/shader_particles/orb3.png" id="2_1eoqs"]
+[ext_resource type="PackedScene" uid="uid://cu6565wpxaocr" path="res://experimental/vam-pirate_ship-vivors_2/detector.tscn" id="4_0v23o"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v1g"]
+radius = 22.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8fn3b"]
+radius = 520.0
+
+[node name="MagneticMine" type="CharacterBody2D"]
+script = ExtResource("1_to0dv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_g4v1g")
+
+[node name="Orb1" type="Sprite2D" parent="."]
+self_modulate = Color(0.10066, 0.393367, 0.0553968, 1)
+scale = Vector2(0.22, 0.22)
+texture = ExtResource("1_76s70")
+
+[node name="Orb3" type="Sprite2D" parent="Orb1"]
+self_modulate = Color(1, 0.262745, 0, 1)
+scale = Vector2(0.535, 0.535)
+texture = ExtResource("2_1eoqs")
+
+[node name="Detector" parent="." instance=ExtResource("4_0v23o")]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detector"]
+shape = SubResource("CircleShape2D_8fn3b")
+
+[connection signal="target_acquired" from="Detector" to="." method="_on_detector_target_acquired"]
+[connection signal="target_lost" from="Detector" to="." method="_on_detector_target_lost"]

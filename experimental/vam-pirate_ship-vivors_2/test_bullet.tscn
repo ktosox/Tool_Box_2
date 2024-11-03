@@ -1,0 +1,76 @@
+[gd_scene load_steps=6 format=3 uid="uid://bb2gimsvt2brk"]
+
+[ext_resource type="Texture2D" uid="uid://c143obm5gwo7d" path="res://resources/shader_particles/orb3.png" id="1_xsol1"]
+
+[sub_resource type="Animation" id="Animation_o0i24"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Detector:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_t4pbf"]
+resource_name = "new_animation"
+length = 2.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Detector:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1200, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ufvw6"]
+_data = {
+"RESET": SubResource("Animation_o0i24"),
+"new_animation": SubResource("Animation_t4pbf")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t13mk"]
+radius = 12.0
+
+[node name="TestBullet" type="Node2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ufvw6")
+}
+autoplay = "new_animation"
+
+[node name="Detector" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detector"]
+shape = SubResource("CircleShape2D_t13mk")
+
+[node name="Orb3" type="Sprite2D" parent="Detector"]
+modulate = Color(0.658031, 0, 0.0438295, 1)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("1_xsol1")
