@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1731001589
+::res://::1731004240
 icon.svg::CompressedTexture2D::7802026146543343258::1727375547::1731001591::1::::<><>::
 LICENSE.md::TextFile::-1::1727458815::0::1::::<><>::
 README.md::TextFile::-1::1727458815::0::1::::<><>::
@@ -31,19 +31,17 @@ hit_data.gd::GDScript::-1::1730321620::0::1::::HitData<>Resource<>::
 side_view_tower_defense.gd::GDScript::-1::1729787896::0::1::::<>Node2D<>::
 side_view_tower_defense.tscn::PackedScene::46318386444278304::1730570576::0::1::::<><>::res://experimental/side_view_tower_defense.gd<>uid://qqjji0wexgsm::::res://experimental/hit_box.tscn<>res://experimental/target_dummy.gd<>uid://dkn2kw0w413ys::::res://experimental/example_gun.tscn<>uid://xtubqpb1avbh::::res://experimental/health_shower.tscn
 target_dummy.gd::GDScript::-1::1728734466::0::1::::<>Node2D<>::
-::res://experimental/3D/::1730746613
+::res://experimental/3D/::1731001592
 colors2.png::CompressedTexture2D::6634870139305001336::1729872605::1731001592::1::::<><>::
 colors.png::CompressedTexture2D::8066812089387711173::1729872141::1731001592::1::::<><>::
 texture_mapping_test.tscn::PackedScene::4525196376379735629::1730019204::0::1::::<><>::uid://c1r8lvfgwh2oy::::res://experimental/3D/colors2.png
-::res://experimental/vam-pirate_ship-vivors_2/::1731001075
+::res://experimental/vam-pirate_ship-vivors_2/::1731003947
 detector.gd::GDScript::-1::1730746539::0::1::::<>Area2D<>::
 detector.tscn::PackedScene::6242492430315233373::1730746539::0::1::::<><>::res://experimental/vam-pirate_ship-vivors_2/detector.gd
-dingy.obj::Mesh::690778703482369530::1700920233::1731001592::1::::<><>::
 enemy_gun.gd::GDScript::-1::1730746539::0::1::::<>Node2D<>::
 enemy_gun.tscn::PackedScene::5441806212399945967::1730746539::0::1::::<><>::res://experimental/vam-pirate_ship-vivors_2/enemy_gun.gd<>uid://cu6565wpxaocr::::res://experimental/vam-pirate_ship-vivors_2/detector.tscn
 explosion.gd::GDScript::-1::1731000812::0::1::::<>Node2D<>::
 explosion.tscn::PackedScene::7935270578778651413::1731000812::0::1::::<><>::res://experimental/vam-pirate_ship-vivors_2/explosion.gd<>uid://cltl2m3w3n6tj::::res://resources/shader_particles/smoke6.png<>uid://dsl8w7dvr3vv5::::res://resources/shader_particles/smoke3.png<>res://experimental/attack_data.gd
-Galeon.obj::Mesh::9219077200306255844::1700920233::1731001592::1::::<><>::
 game.tscn::PackedScene::3098413322691927121::1731000812::0::1::::<><>::res://experimental/vam-pirate_ship-vivors_2/player_ship.gd<>uid://onm5xeg5u5wu::::res://resources/shader_particles/orb1.png<>uid://d11ofdafmrw2k::::res://resources/shader_particles/smoke2.png<>uid://cjsb0u1e8f3f4::::res://experimental/vam-pirate_ship-vivors_2/enemy_gun.tscn<>uid://bnodi31vhdku8::::res://experimental/vam-pirate_ship-vivors_2/magnetic_mine.tscn
 hit_box.gd::GDScript::-1::1731000812::0::1::::<>Area2D<>::
 hit_box.tscn::PackedScene::1571512467571281125::1730746539::0::1::::<><>::res://experimental/vam-pirate_ship-vivors_2/hit_box.gd
@@ -51,25 +49,76 @@ magnetic_mine.gd::GDScript::-1::1731000812::0::1::::<>CharacterBody2D<>::
 magnetic_mine.tscn::PackedScene::3327974888656244761::1731000812::0::1::::<><>::uid://onm5xeg5u5wu::::res://resources/shader_particles/orb1.png<>res://experimental/vam-pirate_ship-vivors_2/magnetic_mine.gd<>uid://c143obm5gwo7d::::res://resources/shader_particles/orb3.png<>uid://cu6565wpxaocr::::res://experimental/vam-pirate_ship-vivors_2/detector.tscn
 player_ship.gd::GDScript::-1::1730637143::0::1::::<>CharacterBody2D<>::
 test_bullet.tscn::PackedScene::2512726974065863800::1730746539::0::1::::<><>::uid://c143obm5gwo7d::::res://resources/shader_particles/orb3.png
-watercraftPack_003.obj::Mesh::4777359463405645007::1700920233::1731001592::1::::<><>::
+::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/::1731003936
+License.txt::TextFile::-1::1731003880::0::1::::<><>::
+::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/::1731004028
+::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/::1731003883
+arrow-standing.glb::PackedScene::3918724660792837971::1731003881::1731004243::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+arrow.glb::PackedScene::7686908223574268393::1731003881::1731004243::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+boat-fan.glb::PackedScene::4104451309827051805::1731003881::1731004243::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+boat-fishing-small.glb::PackedScene::3307605023869961793::1731003881::1731004244::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+boat-house-a.glb::PackedScene::6528663283075580953::1731003881::1731004244::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+boat-house-b.glb::PackedScene::1704052131252126000::1731003881::1731004244::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+boat-house-c.glb::PackedScene::8407748701550069230::1731003881::1731004244::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+boat-house-d.glb::PackedScene::3555167789193728581::1731003881::1731004244::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+boat-row-large.glb::PackedScene::5281300942664982030::1731003882::1731004244::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+boat-row-small.glb::PackedScene::3818151963506549103::1731003882::1731004244::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+boat-sail-a.glb::PackedScene::3237716713542712658::1731003882::1731004244::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+boat-sail-b.glb::PackedScene::6756312009376863300::1731003882::1731004244::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+boat-speed-a.glb::PackedScene::2351399919433690907::1731003882::1731004244::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+boat-speed-b.glb::PackedScene::6619403754357013826::1731003882::1731004244::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+boat-speed-c.glb::PackedScene::1003353770135415023::1731003882::1731004245::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+boat-speed-d.glb::PackedScene::6095382868074174601::1731003882::1731004245::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+boat-speed-e.glb::PackedScene::6233728242124544819::1731003882::1731004245::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+boat-speed-f.glb::PackedScene::6091400099274443853::1731003882::1731004245::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+boat-speed-g.glb::PackedScene::5808793869142779358::1731003882::1731004245::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+boat-speed-h.glb::PackedScene::990283655651593897::1731003882::1731004245::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+boat-speed-i.glb::PackedScene::1220874133187967599::1731003882::1731004245::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+boat-speed-j.glb::PackedScene::7088395750100899994::1731003882::1731004245::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+boat-tow-a.glb::PackedScene::3545953794523035090::1731003882::1731004245::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+boat-tow-b.glb::PackedScene::5204630478502614462::1731003882::1731004241::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+boat-tug-a.glb::PackedScene::1049261208324844619::1731003882::1731004241::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+boat-tug-b.glb::PackedScene::3403553245181273108::1731003882::1731004242::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+boat-tug-c.glb::PackedScene::5281097291340257820::1731003882::1731004242::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+buoy-flag.glb::PackedScene::7394348509490097516::1731003882::1731004242::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+buoy.glb::PackedScene::3475294009857977646::1731003882::1731004242::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+cargo-container-a.glb::PackedScene::7857065470490782858::1731003882::1731004242::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+cargo-container-b.glb::PackedScene::4496266184994814561::1731003882::1731004242::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+cargo-container-c.glb::PackedScene::5116769172360247288::1731003882::1731004242::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+cargo-pile-a.glb::PackedScene::6833163727157461949::1731003882::1731004242::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+cargo-pile-b.glb::PackedScene::6956736654709233018::1731003882::1731004242::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+gate-finish.glb::PackedScene::6226774784119315390::1731003882::1731004242::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+gate.glb::PackedScene::5555313732248401732::1731003882::1731004242::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+ramp-wide.glb::PackedScene::4287929188389697817::1731003882::1731004242::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+ramp.glb::PackedScene::7762201601128441535::1731003882::1731004243::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+ship-cargo-a.glb::PackedScene::5630673360637176433::1731003882::1731004243::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+ship-cargo-b.glb::PackedScene::75976893013826797::1731003882::1731004243::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+ship-cargo-c.glb::PackedScene::8704081909989081596::1731003882::1731004243::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+ship-large.glb::PackedScene::3738111565849902948::1731003882::1731004243::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+ship-ocean-liner-small.glb::PackedScene::2824674572493995569::1731003883::1731004243::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+ship-ocean-liner.glb::PackedScene::6067655732962779171::1731003883::1731004243::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+ship-small-ghost.glb::PackedScene::5235110546207574282::1731003883::1731004243::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+ship-small.glb::PackedScene::6277121559074018545::1731003883::1731004243::1::::<><>::uid://b44882rgo3uv7::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/colormap.png
+::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/Textures/::1731003883
+colormap.png::CompressedTexture2D::4483828140708503162::1731003883::1731004246::1::::<><>::
 ::res://resources/::1731001042
 ::res://resources/fonts/::1678306635
-::res://resources/fonts/Fibberish v1.0/::1730746613
+::res://resources/fonts/Fibberish v1.0/::1731001591
 fibberish.ttf::FontFile::4106377196309668501::1678306635::1731001591::1::::<><>::
 readme.txt::TextFile::-1::1678306635::0::1::::<><>::
-::res://resources/fonts/freebooter-font/::1730746613
+::res://resources/fonts/freebooter-font/::1731001591
 Freebooter-6yn1.ttf::FontFile::5364075558861243547::1673116187::1731001591::1::::<><>::
 FreebooterItalic-5Xlv.ttf::FontFile::3912626067845787960::1673116187::1731001591::1::::<><>::
 FreebooterShadow-yL0V.ttf::FontFile::682768118509366666::1673116187::1731001591::1::::<><>::
-::res://resources/fonts/transformers-movie/::1730746613
+::res://resources/fonts/transformers-movie/::1731001591
 Transformers font.txt::TextFile::-1::1727633358::0::1::::<><>::
 Transformers Movie.ttf::FontFile::7585603796007770137::1673116187::1731001591::1::::<><>::
-::res://resources/fonts/treasure-map/::1730746613
+::res://resources/fonts/treasure-map/::1731001591
 TreasureMapDeadhand-yLA3.ttf::FontFile::2426805159232819562::1673116187::1731001591::1::::<><>::
-::res://resources/music/::1731001045
+::res://resources/music/::1731001591
 Duet Musette.ogg::AudioStreamOggVorbis::1530264561074862594::1700920233::1731001591::1::::<><>::
 Miris Magic Dance.ogg::AudioStreamOggVorbis::6398902092933189966::1700920233::1731001591::1::::<><>::
-::res://resources/shader_particles/::1730746613
+::res://resources/shader_particles/::1731001592
 orb1.png::CompressedTexture2D::1010264113995370040::1673116187::1731001592::1::::<><>::
 orb2.png::CompressedTexture2D::3341533279915974483::1673116187::1731001592::1::::<><>::
 orb3.png::CompressedTexture2D::6659343406187872971::1673116187::1731001592::1::::<><>::
@@ -80,7 +129,7 @@ smoke2.png::CompressedTexture2D::9038704931955912416::1673116187::1731001592::1:
 smoke3.png::CompressedTexture2D::8447414026445349644::1673116187::1731001592::1::::<><>::
 smoke5.png::CompressedTexture2D::7447502317760200868::1673116187::1731001592::1::::<><>::
 smoke6.png::CompressedTexture2D::5584858602659826931::1673116187::1731001592::1::::<><>::
-::res://resources/shader_textures/::1730746613
+::res://resources/shader_textures/::1731001592
 Shader_Texture_1.png::CompressedTexture2D::898610455411830541::1673116187::1731001592::1::::<><>::
 Shader_Texture_2.png::CompressedTexture2D::3507255635825779499::1673116187::1731001592::1::::<><>::
 Shader_Texture_3.png::CompressedTexture2D::5704393958083923896::1673116187::1731001592::1::::<><>::
@@ -93,7 +142,7 @@ Shader_Texture_9.png::CompressedTexture2D::4181715014314870446::1673116187::1731
 Shader_Texture_10.png::CompressedTexture2D::9106764360791925617::1673116187::1731001592::1::::<><>::
 Shader_Texture_11.png::CompressedTexture2D::4883905018170520269::1673116187::1731001592::1::::<><>::
 ::res://resources/ui_icons/::1731000965
-::res://resources/ui_icons/pirate/::1731000991
+::res://resources/ui_icons/pirate/::1731001592
 anchor.png::CompressedTexture2D::7121667964976441616::1700920233::1731001592::1::::<><>::
 bandana.png::CompressedTexture2D::5602460555768548535::1700920233::1731001592::1::::<><>::
 barrel.png::CompressedTexture2D::5383794320354783056::1700920233::1731001592::1::::<><>::
