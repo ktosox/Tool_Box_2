@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://v2jh7hf2gfx7"
+path="res://.godot/imported/Duet Musette.ogg-d4aa9e04b27442df6fb9e5ff1e5bb6ab.oggvorbisstr"
+
+[deps]
+
+source_file="res://resources/music/Duet Musette.ogg"
+dest_files=["res://.godot/imported/Duet Musette.ogg-d4aa9e04b27442df6fb9e5ff1e5bb6ab.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

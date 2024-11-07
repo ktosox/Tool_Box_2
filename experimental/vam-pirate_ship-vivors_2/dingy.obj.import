@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://j3va3d72b7lm"
+path="res://.godot/imported/dingy.obj-34a766dfd190da6d438fbca169390c20.mesh"
+
+[deps]
+
+files=["res://.godot/imported/dingy.obj-34a766dfd190da6d438fbca169390c20.mesh"]
+
+source_file="res://experimental/vam-pirate_ship-vivors_2/dingy.obj"
+dest_files=["res://.godot/imported/dingy.obj-34a766dfd190da6d438fbca169390c20.mesh", "res://.godot/imported/dingy.obj-34a766dfd190da6d438fbca169390c20.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
