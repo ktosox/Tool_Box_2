@@ -35,6 +35,7 @@ texture = ExtResource("2_vfmk5")
 shape = SubResource("CapsuleShape2D_nnxsf")
 
 [node name="Camera2D" type="Camera2D" parent="PlayerShip"]
+zoom = Vector2(0.25, 0.25)
 position_smoothing_enabled = true
 position_smoothing_speed = 4.0
 

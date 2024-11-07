@@ -22,7 +22,8 @@ func _physics_process(delta: float) -> void:
 
 
 
-	move_and_slide()
+	if move_and_slide():
+		explode()
 
 
 func explode():
@@ -43,10 +44,4 @@ func get_hit(data : AttackData):
 
 func _on_detector_target_lost() -> void:
 	target = null
-	pass # Replace with function body.
-
-
-func _on_colision_range_body_entered(body: Node2D) -> void:
-	if body != self:
-		explode()
 	pass # Replace with function body.

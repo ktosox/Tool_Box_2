@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bnodi31vhdku8"]
+[gd_scene load_steps=7 format=3 uid="uid://bnodi31vhdku8"]
 
 [ext_resource type="Texture2D" uid="uid://onm5xeg5u5wu" path="res://resources/shader_particles/orb1.png" id="1_76s70"]
 [ext_resource type="Script" path="res://experimental/vam-pirate_ship-vivors_2/magnetic_mine.gd" id="1_to0dv"]
@@ -11,12 +11,9 @@ radius = 22.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_8fn3b"]
 radius = 520.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ayw8v"]
-radius = 19.2354
-
 [node name="MagneticMine" type="CharacterBody2D"]
 collision_layer = 16
-collision_mask = 0
+collision_mask = 22
 script = ExtResource("1_to0dv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -38,14 +35,5 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Detector"]
 shape = SubResource("CircleShape2D_8fn3b")
 
-[node name="ColisionRange" type="Area2D" parent="."]
-collision_layer = 0
-collision_mask = 22
-monitorable = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ColisionRange"]
-shape = SubResource("CircleShape2D_ayw8v")
-
 [connection signal="target_acquired" from="Detector" to="." method="_on_detector_target_acquired"]
 [connection signal="target_lost" from="Detector" to="." method="_on_detector_target_lost"]
-[connection signal="body_entered" from="ColisionRange" to="." method="_on_colision_range_body_entered"]
