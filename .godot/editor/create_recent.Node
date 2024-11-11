@@ -1,3 +1,4 @@
+AnimationPlayer
 SubViewportContainer
 Camera3D
 Node3D
@@ -5,11 +6,9 @@ SubViewport
 CollisionShape2D
 CharacterBody2D
 Area2D
-AnimationPlayer
 Node2D
 Timer
 Marker2D
 Line2D
 Camera2D
 StaticBody2D
-Button

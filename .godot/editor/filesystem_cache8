@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1731102992
+::res://::1731177688
 icon.svg::CompressedTexture2D::7802026146543343258::1728226332::1731013127::1::::<><>::
 LICENSE.md::TextFile::-1::1728226332::0::1::::<><>::
 README.md::TextFile::-1::1728226332::0::1::::<><>::
@@ -34,20 +34,20 @@ target_dummy.gd::GDScript::-1::1728503955::0::1::::<>Node2D<>::
 colors2.png::CompressedTexture2D::6634870139305001336::1730404830::1731013127::1::::<><>::
 colors.png::CompressedTexture2D::8066812089387711173::1730404830::1731013128::1::::<><>::
 texture_mapping_test.tscn::PackedScene::4525196376379735629::1730653398::0::1::::<><>::uid://c1r8lvfgwh2oy::::res://experimental/3D/colors2.png
-::res://experimental/vam-pirate_ship-vivors_2/::1731016170
+::res://experimental/vam-pirate_ship-vivors_2/::1731103696
 detector.gd::GDScript::-1::1730659935::0::1::::<>Area2D<>::
 detector.tscn::PackedScene::6242492430315233373::1730976272::0::1::::<><>::res://experimental/vam-pirate_ship-vivors_2/detector.gd
 enemy_gun.gd::GDScript::-1::1730660175::0::1::::<>Node2D<>::
 enemy_gun.tscn::PackedScene::5441806212399945967::1730976272::0::1::::<><>::res://experimental/vam-pirate_ship-vivors_2/enemy_gun.gd<>uid://cu6565wpxaocr::::res://experimental/vam-pirate_ship-vivors_2/detector.tscn
 explosion.gd::GDScript::-1::1730835450::0::1::::<>Node2D<>::
-explosion.tscn::PackedScene::7935270578778651413::1731016170::0::1::::<><>::res://experimental/vam-pirate_ship-vivors_2/explosion.gd<>uid://cltl2m3w3n6tj::::res://resources/shader_particles/smoke6.png<>uid://dsl8w7dvr3vv5::::res://resources/shader_particles/smoke3.png<>res://experimental/attack_data.gd
-game.tscn::PackedScene::3098413322691927121::1731016170::0::1::::<><>::res://experimental/vam-pirate_ship-vivors_2/player_ship.gd<>uid://onm5xeg5u5wu::::res://resources/shader_particles/orb1.png<>uid://d11ofdafmrw2k::::res://resources/shader_particles/smoke2.png<>uid://cjsb0u1e8f3f4::::res://experimental/vam-pirate_ship-vivors_2/enemy_gun.tscn<>uid://bnodi31vhdku8::::res://experimental/vam-pirate_ship-vivors_2/magnetic_mine.tscn<>uid://cneukwlht7ocs::::res://experimental/vam-pirate_ship-vivors_2/pickup.tscn
+explosion.tscn::PackedScene::7935270578778651413::1731103696::0::1::::<><>::res://experimental/vam-pirate_ship-vivors_2/explosion.gd<>uid://cltl2m3w3n6tj::::res://resources/shader_particles/smoke6.png<>uid://dsl8w7dvr3vv5::::res://resources/shader_particles/smoke3.png<>res://experimental/attack_data.gd
+game.tscn::PackedScene::3098413322691927121::1731103696::0::1::::<><>::res://experimental/vam-pirate_ship-vivors_2/player_ship.gd<>uid://byqhyixw2emev::::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/boat-fan.glb<>uid://d11ofdafmrw2k::::res://resources/shader_particles/smoke2.png<>uid://cjsb0u1e8f3f4::::res://experimental/vam-pirate_ship-vivors_2/enemy_gun.tscn<>uid://bnodi31vhdku8::::res://experimental/vam-pirate_ship-vivors_2/magnetic_mine.tscn<>uid://cneukwlht7ocs::::res://experimental/vam-pirate_ship-vivors_2/pickup.tscn
 hit_box.gd::GDScript::-1::1730833099::0::1::::<>Area2D<>::
 hit_box.tscn::PackedScene::1571512467571281125::1730976271::0::1::::<><>::res://experimental/vam-pirate_ship-vivors_2/hit_box.gd
 magnetic_mine.gd::GDScript::-1::1730976261::0::1::::<>CharacterBody2D<>::
-magnetic_mine.tscn::PackedScene::3327974888656244761::1731016170::0::1::::<><>::uid://onm5xeg5u5wu::::res://resources/shader_particles/orb1.png<>res://experimental/vam-pirate_ship-vivors_2/magnetic_mine.gd<>uid://c143obm5gwo7d::::res://resources/shader_particles/orb3.png<>uid://cu6565wpxaocr::::res://experimental/vam-pirate_ship-vivors_2/detector.tscn
+magnetic_mine.tscn::PackedScene::3327974888656244761::1731103696::0::1::::<><>::uid://onm5xeg5u5wu::::res://resources/shader_particles/orb1.png<>res://experimental/vam-pirate_ship-vivors_2/magnetic_mine.gd<>uid://c143obm5gwo7d::::res://resources/shader_particles/orb3.png<>uid://cu6565wpxaocr::::res://experimental/vam-pirate_ship-vivors_2/detector.tscn
 pickup.gd::GDScript::-1::1731016054::0::1::::<>CharacterBody2D<>::
-pickup.tscn::PackedScene::5694787216342504542::1731016170::0::1::::<><>::res://experimental/vam-pirate_ship-vivors_2/pickup.gd<>uid://cu6565wpxaocr::::res://experimental/vam-pirate_ship-vivors_2/detector.tscn<>uid://dedvjl80bstke::::res://resources/shader_particles/smoke5.png
+pickup.tscn::PackedScene::5694787216342504542::1731103696::0::1::::<><>::res://experimental/vam-pirate_ship-vivors_2/pickup.gd<>uid://cu6565wpxaocr::::res://experimental/vam-pirate_ship-vivors_2/detector.tscn<>uid://dedvjl80bstke::::res://resources/shader_particles/smoke5.png
 player_ship.gd::GDScript::-1::1730641349::0::1::::<>CharacterBody2D<>::
 test_bullet.tscn::PackedScene::2512726974065863800::1730976272::0::1::::<><>::uid://c143obm5gwo7d::::res://resources/shader_particles/orb3.png
 ::res://experimental/vam-pirate_ship-vivors_2/KenneyWatercraft/::1731011964
