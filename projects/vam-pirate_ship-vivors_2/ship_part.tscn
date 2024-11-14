@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://7n8senk725l3"]
+
+[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/ship_part.gd" id="1_nc78k"]
+
+[node name="ShipPart" type="Node"]
+script = ExtResource("1_nc78k")

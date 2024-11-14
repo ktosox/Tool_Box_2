@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://cneukwlht7ocs"]
+
+[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/pickup.gd" id="1_5by2i"]
+[ext_resource type="PackedScene" uid="uid://cu6565wpxaocr" path="res://projects/vam-pirate_ship-vivors_2/detector.tscn" id="2_ebf4v"]
+[ext_resource type="Texture2D" uid="uid://dedvjl80bstke" path="res://resources/shader_particles/smoke5.png" id="3_6gjty"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_edt3s"]
+radius = 30.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bankm"]
+radius = 300.0
+
+[node name="Pickup" type="CharacterBody2D"]
+script = ExtResource("1_5by2i")
+
+[node name="CollectRange" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectRange"]
+shape = SubResource("CircleShape2D_edt3s")
+
+[node name="Detector" parent="." instance=ExtResource("2_ebf4v")]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detector"]
+shape = SubResource("CircleShape2D_bankm")
+
+[node name="Smoke5" type="Sprite2D" parent="."]
+modulate = Color(0.129412, 1, 0.32549, 1)
+scale = Vector2(0.145, 0.145)
+texture = ExtResource("3_6gjty")
+
+[connection signal="body_entered" from="CollectRange" to="." method="_on_collect_range_body_entered"]
+[connection signal="target_acquired" from="Detector" to="." method="_on_detector_target_acquired"]

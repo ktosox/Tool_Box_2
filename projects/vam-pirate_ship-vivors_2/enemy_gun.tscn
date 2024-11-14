@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjsb0u1e8f3f4"]
+
+[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/enemy_gun.gd" id="1_j25v5"]
+[ext_resource type="PackedScene" uid="uid://cu6565wpxaocr" path="res://projects/vam-pirate_ship-vivors_2/detector.tscn" id="2_jp267"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1qyy8"]
+radius = 420.0
+
+[node name="EnemyGun" type="Node2D"]
+script = ExtResource("1_j25v5")
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(60, 0, 0, 0)
+width = 20.0
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(68, 0)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
+
+[node name="Detector" parent="." instance=ExtResource("2_jp267")]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detector"]
+shape = SubResource("CircleShape2D_1qyy8")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="target_acquired" from="Detector" to="." method="_on_detector_target_acquired"]
+[connection signal="target_lost" from="Detector" to="." method="_on_detector_target_lost"]

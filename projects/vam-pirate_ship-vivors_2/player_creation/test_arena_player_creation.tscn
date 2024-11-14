@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmf48bs0iqvef"]
+
+[ext_resource type="PackedScene" uid="uid://b5ahgyqmiemfv" path="res://projects/vam-pirate_ship-vivors_2/player_creation/building_panel.tscn" id="1_xb6vy"]
+
+[node name="TestArenaPlayerCreation" type="Node2D"]
+
+[node name="BuildingPanel" parent="." instance=ExtResource("1_xb6vy")]

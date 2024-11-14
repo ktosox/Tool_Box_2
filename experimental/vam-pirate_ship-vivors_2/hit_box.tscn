@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://wnit0ln3uat6"]
-
-[ext_resource type="Script" path="res://experimental/vam-pirate_ship-vivors_2/hit_box.gd" id="1_rj25p"]
-
-[node name="HitBox" type="Area2D"]
-script = ExtResource("1_rj25p")
