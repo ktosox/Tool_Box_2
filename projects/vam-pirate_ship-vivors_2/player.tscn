@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://vwlkff015x7e"]
+
+[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/player.gd" id="1_eljt5"]
+[ext_resource type="PackedScene" uid="uid://cuosdqgoqst5k" path="res://projects/vam-pirate_ship-vivors_2/player_shower.tscn" id="2_2xdft"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g6ryc"]
+radius = 24.0
+height = 74.0
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+collision_layer = 2
+collision_mask = 4
+motion_mode = 1
+wall_min_slide_angle = 0.0872665
+script = ExtResource("1_eljt5")
+
+[node name="PlayerShower" parent="." instance=ExtResource("2_2xdft")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_g6ryc")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
