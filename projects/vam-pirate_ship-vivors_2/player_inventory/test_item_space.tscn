@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfj6d43wclb6b"]
+
+[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/player_inventory/test_item_space.gd" id="1_gq634"]
+[ext_resource type="PackedScene" uid="uid://bfsf6gb4kp4j5" path="res://projects/vam-pirate_ship-vivors_2/player_inventory/inventory.tscn" id="2_gd7wu"]
+[ext_resource type="PackedScene" uid="uid://oxrw6yncgtdv" path="res://projects/vam-pirate_ship-vivors_2/player_inventory/item_slot.tscn" id="3_i0sj6"]
+
+[node name="TestItemSpace" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gq634")
+
+[node name="Inventory" parent="." instance=ExtResource("2_gd7wu")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 421.0
+offset_top = 188.0
+offset_right = 421.0
+offset_bottom = 188.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="CreateRandomItem" type="Button" parent="."]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 321.0
+offset_right = 244.0
+offset_bottom = 352.0
+text = "create random item"
+
+[node name="ItemSlot" parent="." instance=ExtResource("3_i0sj6")]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 226.0
+offset_right = 202.0
+offset_bottom = 298.0
+
+[connection signal="pressed" from="CreateRandomItem" to="." method="_on_create_random_item_pressed"]

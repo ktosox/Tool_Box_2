@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://oxrw6yncgtdv"]
+
+[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/player_inventory/item_slot.gd" id="1_mfolo"]
+
+[node name="ItemSlot" type="ColorRect"]
+custom_minimum_size = Vector2(72, 72)
+script = ExtResource("1_mfolo")
+
+[node name="ItemTexture" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1

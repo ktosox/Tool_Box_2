@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfsf6gb4kp4j5"]
+
+[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/player_inventory/inventory.gd" id="1_r736w"]
+[ext_resource type="PackedScene" uid="uid://oxrw6yncgtdv" path="res://projects/vam-pirate_ship-vivors_2/player_inventory/item_slot.tscn" id="2_36xh5"]
+
+[node name="Inventory" type="GridContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -980.0
+offset_bottom = -420.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 4
+script = ExtResource("1_r736w")
+
+[node name="ItemSlot" parent="." instance=ExtResource("2_36xh5")]
+layout_mode = 2
+
+[node name="ItemSlot2" parent="." instance=ExtResource("2_36xh5")]
+layout_mode = 2
+
+[node name="ItemSlot3" parent="." instance=ExtResource("2_36xh5")]
+layout_mode = 2
+
+[node name="ItemSlot4" parent="." instance=ExtResource("2_36xh5")]
+layout_mode = 2
+
+[node name="ItemSlot5" parent="." instance=ExtResource("2_36xh5")]
+layout_mode = 2
+
+[node name="ItemSlot6" parent="." instance=ExtResource("2_36xh5")]
+layout_mode = 2
+
+[node name="ItemSlot7" parent="." instance=ExtResource("2_36xh5")]
+layout_mode = 2
+
+[node name="ItemSlot8" parent="." instance=ExtResource("2_36xh5")]
+layout_mode = 2
+
+[node name="ItemSlot9" parent="." instance=ExtResource("2_36xh5")]
+layout_mode = 2
+
+[node name="ItemSlot10" parent="." instance=ExtResource("2_36xh5")]
+layout_mode = 2
+
+[node name="ItemSlot11" parent="." instance=ExtResource("2_36xh5")]
+layout_mode = 2
+
+[node name="ItemSlot12" parent="." instance=ExtResource("2_36xh5")]
+layout_mode = 2
+
+[node name="ItemSlot13" parent="." instance=ExtResource("2_36xh5")]
+layout_mode = 2
+
+[node name="ItemSlot14" parent="." instance=ExtResource("2_36xh5")]
+layout_mode = 2
+
+[node name="ItemSlot15" parent="." instance=ExtResource("2_36xh5")]
+layout_mode = 2
+
+[node name="ItemSlot16" parent="." instance=ExtResource("2_36xh5")]
+layout_mode = 2
