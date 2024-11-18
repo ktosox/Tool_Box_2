@@ -14,7 +14,7 @@ grow_vertical = 2
 layout_mode = 0
 offset_right = 360.0
 offset_bottom = 720.0
-color = Color(0.0219715, 0.505489, 0.646335, 1)
+color = Color(0.00494937, 0.240737, 0.315018, 1)
 
 [node name="Layout" type="VBoxContainer" parent="Back"]
 layout_mode = 1
@@ -24,11 +24,33 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Control2" type="ColorRect" parent="Back/Layout"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.435294, 0.435294, 0.435294, 0.560784)
+
 [node name="Body" parent="Back/Layout" instance=ExtResource("1_1lymg")]
 layout_mode = 2
 
-[node name="Weapon" type="HBoxContainer" parent="Back/Layout"]
+[node name="Control5" type="ColorRect" parent="Back/Layout"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.435294, 0.435294, 0.435294, 0.560784)
+
+[node name="Weapon" parent="Back/Layout" instance=ExtResource("1_1lymg")]
 layout_mode = 2
 
-[node name="Tool" type="HBoxContainer" parent="Back/Layout"]
+[node name="Control6" type="ColorRect" parent="Back/Layout"]
 layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.435294, 0.435294, 0.435294, 0.560784)
+
+[node name="Tool" parent="Back/Layout" instance=ExtResource("1_1lymg")]
+layout_mode = 2
+
+[node name="Control7" type="ColorRect" parent="Back/Layout"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.435294, 0.435294, 0.435294, 0.560784)
+
+[editable path="Back/Layout/Body"]

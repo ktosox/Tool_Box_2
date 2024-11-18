@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtu38s4sqdfdx"]
+
+[ext_resource type="Texture2D" uid="uid://deh0vld1jir4b" path="res://resources/ui_icons/pirate/pirate-hook.png" id="1_upcn5"]
+[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/player_creation/option.gd" id="2_celc7"]
+
+[node name="Option" type="TextureRect"]
+size_flags_horizontal = 3
+texture = ExtResource("1_upcn5")
+expand_mode = 4
+script = ExtResource("2_celc7")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "part A"

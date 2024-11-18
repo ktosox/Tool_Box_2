@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuosdqgoqst5k"]
+
+[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/window_to_3d.gd" id="1_5umju"]
+
+[sub_resource type="Environment" id="Environment_0ijcl"]
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+
+[node name="WindowTo3D" type="SubViewportContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -720.0
+offset_top = -440.0
+offset_right = -560.0
+offset_bottom = -280.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+script = ExtResource("1_5umju")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(160, 160)
+render_target_update_mode = 4
+
+[node name="Scene" type="Node3D" parent="SubViewport"]
+
+[node name="ObjectHolder" type="Node3D" parent="SubViewport/Scene"]
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport/Scene"]
+transform = Transform3D(-1, -8.74228e-08, -3.82137e-15, 0, -4.37114e-08, 1, -8.74228e-08, 1, 4.37114e-08, 0, 4, 0)
+environment = SubResource("Environment_0ijcl")

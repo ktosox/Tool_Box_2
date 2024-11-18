@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var explosion_scene = preload("res://experimental/vam-pirate_ship-vivors_2/explosion.tscn")
+var explosion_scene = preload("./explosion.tscn")
 
 const SPEED = 190.0
 
