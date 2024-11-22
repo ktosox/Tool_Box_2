@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/ship_part.gd" id="1_nc78k"]
 
-[node name="ShipPart" type="Node"]
+[node name="ShipPart" type="Node2D"]
 script = ExtResource("1_nc78k")

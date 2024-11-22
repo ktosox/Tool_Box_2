@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cf5mdaxtxu62v"]
+
+[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/ship_part.gd" id="1_efyoo"]
+[ext_resource type="PackedScene" uid="uid://cuosdqgoqst5k" path="res://projects/vam-pirate_ship-vivors_2/window_to_3d.tscn" id="2_otgo4"]
+[ext_resource type="PackedScene" uid="uid://8rbhim3jvf7p" path="res://projects/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/boat-speed-a.glb" id="3_bid3t"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ako1o"]
+radius = 32.0
+height = 112.0
+
+[node name="SpeedBoat" type="CollisionShape2D"]
+shape = SubResource("CapsuleShape2D_ako1o")
+script = ExtResource("1_efyoo")
+special_properties = {
+"move_acceleration": 460.0,
+"move_speed": 340.0,
+"turn_speed": 1.4
+}
+
+[node name="WindowTo3D" parent="." instance=ExtResource("2_otgo4")]
+offset_left = -80.0
+offset_top = -80.0
+offset_right = 80.0
+offset_bottom = 80.0
+load_this_on_start = ExtResource("3_bid3t")

@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://wnxwn405uush"]
+
+[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/ship_part.gd" id="1_x3suh"]
+[ext_resource type="PackedScene" uid="uid://cuosdqgoqst5k" path="res://projects/vam-pirate_ship-vivors_2/window_to_3d.tscn" id="2_hl7f6"]
+[ext_resource type="PackedScene" uid="uid://byqhyixw2emev" path="res://projects/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/boat-fan.glb" id="3_hamwg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ako1o"]
+radius = 32.0
+height = 112.0
+
+[node name="AirBoat" type="CollisionShape2D"]
+shape = SubResource("CapsuleShape2D_ako1o")
+script = ExtResource("1_x3suh")
+special_properties = {
+"move_acceleration": 360.0,
+"move_speed": 300.0,
+"turn_speed": 2.5
+}
+
+[node name="WindowTo3D" parent="." instance=ExtResource("2_hl7f6")]
+offset_left = -80.0
+offset_top = -80.0
+offset_right = 80.0
+offset_bottom = 80.0
+load_this_on_start = ExtResource("3_hamwg")

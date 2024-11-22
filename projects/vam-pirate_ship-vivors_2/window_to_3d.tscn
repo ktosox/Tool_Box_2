@@ -7,6 +7,7 @@ ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
 
 [node name="WindowTo3D" type="SubViewportContainer"]
+custom_minimum_size = Vector2(160, 160)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5

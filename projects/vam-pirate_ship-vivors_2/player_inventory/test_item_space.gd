@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 
 func _on_create_random_item_pressed() -> void:
 	var new_item = ItemData.new()
-	new_item.texture = load(new_item.valid_item_textures[randi()%3])
 	new_item.type = randi()%4
+	new_item.texture = load("res://resources/ui_icons/pirate/piranha.png")
 	$ItemSlot.take_item(new_item)
 	pass # Replace with function body.

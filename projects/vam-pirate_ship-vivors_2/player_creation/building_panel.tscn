@@ -1,6 +1,55 @@
-[gd_scene load_steps=2 format=3 uid="uid://b5ahgyqmiemfv"]
+[gd_scene load_steps=18 format=3 uid="uid://b5ahgyqmiemfv"]
 
 [ext_resource type="PackedScene" uid="uid://xr0rqesr0eri" path="res://projects/vam-pirate_ship-vivors_2/player_creation/part_selector.tscn" id="1_1lymg"]
+[ext_resource type="PackedScene" uid="uid://wnxwn405uush" path="res://projects/vam-pirate_ship-vivors_2/ship_parts/air_boat.tscn" id="2_dw2kl"]
+[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/player_inventory/item_data.gd" id="2_vurqv"]
+[ext_resource type="Texture2D" uid="uid://ddy8dqjejwaat" path="res://resources/ui_icons/pirate/dolphin.png" id="4_ko35t"]
+[ext_resource type="PackedScene" uid="uid://cxv8ea5o2yvi4" path="res://projects/vam-pirate_ship-vivors_2/ship_parts/battle_boat.tscn" id="5_24u31"]
+[ext_resource type="Texture2D" uid="uid://b6gtkhtigj8is" path="res://resources/ui_icons/pirate/galleon.png" id="6_ly8gj"]
+[ext_resource type="PackedScene" uid="uid://cf5mdaxtxu62v" path="res://projects/vam-pirate_ship-vivors_2/ship_parts/speed_boat.tscn" id="7_fggqo"]
+[ext_resource type="Texture2D" uid="uid://hxd642ogtf3s" path="res://resources/ui_icons/pirate/figurehead.png" id="8_14eov"]
+
+[sub_resource type="Resource" id="Resource_4tx0q"]
+script = ExtResource("2_vurqv")
+type = 0
+texture = ExtResource("4_ko35t")
+payload = ExtResource("2_dw2kl")
+
+[sub_resource type="Resource" id="Resource_ou8r0"]
+script = ExtResource("2_vurqv")
+type = 0
+texture = ExtResource("6_ly8gj")
+payload = ExtResource("5_24u31")
+
+[sub_resource type="Resource" id="Resource_texbo"]
+script = ExtResource("2_vurqv")
+type = 0
+texture = ExtResource("8_14eov")
+payload = ExtResource("7_fggqo")
+
+[sub_resource type="Resource" id="Resource_480ld"]
+script = ExtResource("2_vurqv")
+type = 0
+
+[sub_resource type="Resource" id="Resource_wtse1"]
+script = ExtResource("2_vurqv")
+type = 0
+
+[sub_resource type="Resource" id="Resource_sh28y"]
+script = ExtResource("2_vurqv")
+type = 0
+
+[sub_resource type="Resource" id="Resource_fhnc8"]
+script = ExtResource("2_vurqv")
+type = 0
+
+[sub_resource type="Resource" id="Resource_relsn"]
+script = ExtResource("2_vurqv")
+type = 0
+
+[sub_resource type="Resource" id="Resource_4qnlf"]
+script = ExtResource("2_vurqv")
+type = 0
 
 [node name="BuildingPanel" type="Control"]
 layout_mode = 3
@@ -31,6 +80,9 @@ color = Color(0.435294, 0.435294, 0.435294, 0.560784)
 
 [node name="Body" parent="Back/Layout" instance=ExtResource("1_1lymg")]
 layout_mode = 2
+part_A = SubResource("Resource_4tx0q")
+part_B = SubResource("Resource_ou8r0")
+part_C = SubResource("Resource_texbo")
 
 [node name="Control5" type="ColorRect" parent="Back/Layout"]
 layout_mode = 2
@@ -39,6 +91,9 @@ color = Color(0.435294, 0.435294, 0.435294, 0.560784)
 
 [node name="Weapon" parent="Back/Layout" instance=ExtResource("1_1lymg")]
 layout_mode = 2
+part_A = SubResource("Resource_480ld")
+part_B = SubResource("Resource_wtse1")
+part_C = SubResource("Resource_sh28y")
 
 [node name="Control6" type="ColorRect" parent="Back/Layout"]
 layout_mode = 2
@@ -47,10 +102,11 @@ color = Color(0.435294, 0.435294, 0.435294, 0.560784)
 
 [node name="Tool" parent="Back/Layout" instance=ExtResource("1_1lymg")]
 layout_mode = 2
+part_A = SubResource("Resource_fhnc8")
+part_B = SubResource("Resource_relsn")
+part_C = SubResource("Resource_4qnlf")
 
 [node name="Control7" type="ColorRect" parent="Back/Layout"]
 layout_mode = 2
 size_flags_vertical = 3
 color = Color(0.435294, 0.435294, 0.435294, 0.560784)
-
-[editable path="Back/Layout/Body"]

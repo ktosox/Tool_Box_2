@@ -1,12 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://vwlkff015x7e"]
+[gd_scene load_steps=2 format=3 uid="uid://vwlkff015x7e"]
 
 [ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/player.gd" id="1_eljt5"]
-[ext_resource type="PackedScene" uid="uid://cuosdqgoqst5k" path="res://projects/vam-pirate_ship-vivors_2/window_to_3d.tscn" id="2_q3bhl"]
-[ext_resource type="PackedScene" uid="uid://byqhyixw2emev" path="res://projects/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/boat-fan.glb" id="3_koy7s"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g6ryc"]
-radius = 32.0
-height = 126.0
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 collision_layer = 2
@@ -14,16 +8,6 @@ collision_mask = 4
 motion_mode = 1
 wall_min_slide_angle = 0.0872665
 script = ExtResource("1_eljt5")
-
-[node name="WindowTo3D" parent="." instance=ExtResource("2_q3bhl")]
-offset_left = -80.0
-offset_top = -80.0
-offset_right = 80.0
-offset_bottom = 80.0
-load_this_on_start = ExtResource("3_koy7s")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_g6ryc")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.5, 0.5)
