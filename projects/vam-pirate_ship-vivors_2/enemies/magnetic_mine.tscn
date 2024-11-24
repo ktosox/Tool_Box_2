@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bnodi31vhdku8"]
 
 [ext_resource type="Texture2D" uid="uid://onm5xeg5u5wu" path="res://resources/shader_particles/orb1.png" id="1_76s70"]
-[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/magnetic_mine.gd" id="1_to0dv"]
+[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/enemies/magnetic_mine.gd" id="1_to0dv"]
 [ext_resource type="Texture2D" uid="uid://c143obm5gwo7d" path="res://resources/shader_particles/orb3.png" id="2_1eoqs"]
 [ext_resource type="PackedScene" uid="uid://cu6565wpxaocr" path="res://projects/vam-pirate_ship-vivors_2/detector.tscn" id="4_0v23o"]
 

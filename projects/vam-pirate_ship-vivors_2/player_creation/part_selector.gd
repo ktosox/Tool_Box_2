@@ -1,6 +1,6 @@
 extends HBoxContainer
 
-signal part_selected(part)
+signal part_selected(part : PackedScene)
 
 @export var part_A : ItemData
 
@@ -18,7 +18,7 @@ func _ready():
 
 func _on_option_a_pressed() -> void:
 	$OptionA.disabled = true
-	emit_signal("part_selected",part_A.payload.instantiate())
+	emit_signal("part_selected",part_A.payload)
 	$OptionB.disabled = false
 	$OptionC.disabled = false
 	pass # Replace with function body.
@@ -26,7 +26,7 @@ func _on_option_a_pressed() -> void:
 
 func _on_option_b_pressed() -> void:
 	$OptionB.disabled = true
-	emit_signal("part_selected",part_B.payload.instantiate())
+	emit_signal("part_selected",part_B.payload)
 	$OptionC.disabled = false
 	$OptionA.disabled = false
 	pass # Replace with function body.
@@ -34,7 +34,7 @@ func _on_option_b_pressed() -> void:
 
 func _on_option_c_pressed() -> void:
 	$OptionC.disabled = true
-	emit_signal("part_selected",part_C.payload.instantiate())
+	emit_signal("part_selected",part_C.payload)
 	$OptionB.disabled = false
 	$OptionA.disabled = false
 	pass # Replace with function body.

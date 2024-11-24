@@ -21,6 +21,10 @@ window/size/viewport_height=720
 window/stretch/mode="canvas_items"
 window/stretch/aspect="keep_width"
 
+[dotnet]
+
+project/assembly_name="Tool_Box_2"
+
 [input]
 
 ui_left={

@@ -1,10 +1,48 @@
-[gd_scene load_steps=3 format=3 uid="uid://cuosdqgoqst5k"]
+[gd_scene load_steps=6 format=3 uid="uid://cuosdqgoqst5k"]
 
 [ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/window_to_3d.gd" id="1_5umju"]
 
 [sub_resource type="Environment" id="Environment_0ijcl"]
 ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Animation" id="Animation_8qg71"]
+resource_name = "WOBBLE"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SubViewport/Scene/Camera3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.4, 2),
+"transitions": PackedFloat32Array(2, 0.5, -2, 1),
+"update": 0,
+"values": [Vector3(-1.5708, 3.14159, 0), Vector3(-1.50098, 3.14159, 0), Vector3(-1.64061, 3.14159, 0), Vector3(-1.5708, 3.14159, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5w0r5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SubViewport/Scene/Camera3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.5708, 3.14159, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k7xfs"]
+_data = {
+"RESET": SubResource("Animation_5w0r5"),
+"WOBBLE": SubResource("Animation_8qg71")
+}
 
 [node name="WindowTo3D" type="SubViewportContainer"]
 custom_minimum_size = Vector2(160, 160)
@@ -23,8 +61,10 @@ stretch = true
 script = ExtResource("1_5umju")
 
 [node name="SubViewport" type="SubViewport" parent="."]
+own_world_3d = true
 transparent_bg = true
 handle_input_locally = false
+canvas_item_default_texture_filter = 0
 size = Vector2i(160, 160)
 render_target_update_mode = 4
 
@@ -33,5 +73,10 @@ render_target_update_mode = 4
 [node name="ObjectHolder" type="Node3D" parent="SubViewport/Scene"]
 
 [node name="Camera3D" type="Camera3D" parent="SubViewport/Scene"]
-transform = Transform3D(-1, -8.74228e-08, -3.82137e-15, 0, -4.37114e-08, 1, -8.74228e-08, 1, 4.37114e-08, 0, 4, 0)
+transform = Transform3D(-1, -1.50996e-07, -6.60024e-15, 0, -4.37114e-08, 1, -1.50996e-07, 1, 4.37114e-08, 0, 4, 0)
 environment = SubResource("Environment_0ijcl")
+
+[node name="Animator" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_k7xfs")
+}

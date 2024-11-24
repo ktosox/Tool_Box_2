@@ -11,16 +11,16 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_body_part_selected(part: Variant) -> void:
-	$Player.apply_part(part)
+func _on_body_part_selected(part: PackedScene) -> void:
+	$Player.apply_part(part.instantiate())
 	pass # Replace with function body.
 
 
-func _on_weapon_part_selected(part: Variant) -> void:
-	$Player.apply_part(part)
+func _on_weapon_part_selected(part: PackedScene) -> void:
+	$Player.apply_part(part.instantiate())
 	pass # Replace with function body.
 
 
-func _on_tool_part_selected(part: Variant) -> void:
-	$Player.apply_part(part)
+func _on_tool_part_selected(part: PackedScene) -> void:
+	$Player.apply_part(part.instantiate())
 	pass # Replace with function body.
