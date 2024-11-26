@@ -11,11 +11,11 @@ extends Node
 func _ready():
 	await owner.ready
 	for c in get_children():
-		c.stateMachine = self
+		c.state_machine = self
 		if c.get_child_count()>0: # check for child states
 			for d in c.get_children():
 				if d.is_class("State"):
-					d.stateMachine = self
+					d.state_machine = self
 	activate_state()
 
 
@@ -28,6 +28,7 @@ func transition_to(targetState : String, msg = {}): # change state to targetStat
 
 
 func activate_state(msg = {}):
+	print("activating: ",state)
 	state.enter(msg)
 	state.set_process(true)
 	state.set_physics_process(true)

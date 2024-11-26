@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://do2if1haihwhp"]
+
+[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/ship_parts/weapon.gd" id="1_2xvm2"]
+[ext_resource type="PackedScene" uid="uid://cu6565wpxaocr" path="res://projects/vam-pirate_ship-vivors_2/detector.tscn" id="2_vob72"]
+[ext_resource type="Script" path="res://systems/state_machine/state_machine.gd" id="3_mvt4j"]
+[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/ship_parts/idle.gd" id="4_rt6m5"]
+[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/ship_parts/warmup.gd" id="5_4mmds"]
+[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/ship_parts/cooldown.gd" id="6_770gn"]
+
+[node name="WeaponBase" type="Node2D"]
+script = ExtResource("1_2xvm2")
+type = 1
+
+[node name="Detector" parent="." instance=ExtResource("2_vob72")]
+collision_mask = 16
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Detector"]
+polygon = PackedVector2Array(40, 120, 40, -120, -340, -300, -340, 300)
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("3_mvt4j")
+initial_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource("4_rt6m5")
+
+[node name="Warmup" type="Node" parent="StateMachine"]
+script = ExtResource("5_4mmds")
+
+[node name="Cooldown" type="Node" parent="StateMachine"]
+script = ExtResource("6_770gn")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "fake target"
+
+[node name="AutoLoader" type="Timer" parent="."]
+
+[connection signal="warmup_completed" from="StateMachine/Warmup" to="." method="_on_warmup_warmup_completed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="AutoLoader" to="." method="_on_auto_loader_timeout"]

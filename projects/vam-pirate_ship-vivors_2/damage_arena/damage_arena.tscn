@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://nelkrs6o10dy"]
+[gd_scene load_steps=8 format=3 uid="uid://nelkrs6o10dy"]
 
 [ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/damage_arena/spawn_ui.gd" id="1_g532p"]
 [ext_resource type="Texture2D" uid="uid://onm5xeg5u5wu" path="res://resources/shader_particles/orb1.png" id="2_7g3f1"]
 [ext_resource type="PackedScene" uid="uid://bnodi31vhdku8" path="res://projects/vam-pirate_ship-vivors_2/enemies/magnetic_mine.tscn" id="2_bgjbt"]
 [ext_resource type="PackedScene" uid="uid://vwlkff015x7e" path="res://projects/vam-pirate_ship-vivors_2/player.tscn" id="4_msigs"]
-[ext_resource type="PackedScene" uid="uid://cxv8ea5o2yvi4" path="res://projects/vam-pirate_ship-vivors_2/battle_boat.tscn" id="5_dbqgg"]
+[ext_resource type="PackedScene" uid="uid://cxv8ea5o2yvi4" path="res://projects/vam-pirate_ship-vivors_2/ship_parts/battle_boat.tscn" id="5_dbqgg"]
+[ext_resource type="PackedScene" uid="uid://cu6565wpxaocr" path="res://projects/vam-pirate_ship-vivors_2/detector.tscn" id="5_v2mcl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8ma6l"]
+radius = 128.0
 
 [node name="DamageArena" type="Node2D"]
 
@@ -100,5 +104,12 @@ texture = ExtResource("2_7g3f1")
 position = Vector2(653, 381)
 
 [node name="BattleBoat" parent="Player" instance=ExtResource("5_dbqgg")]
+
+[node name="Detector" parent="Player" instance=ExtResource("5_v2mcl")]
+position = Vector2(-40, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Detector"]
+position = Vector2(-75, 40)
+shape = SubResource("CircleShape2D_8ma6l")
 
 [connection signal="pressed" from="SpawnUI/Back/Layout/EnemySection/SpawnEnemy" to="SpawnUI" method="_on_spawn_enemy_pressed"]

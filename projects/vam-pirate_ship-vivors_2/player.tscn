@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://vwlkff015x7e"]
 
 [ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/player.gd" id="1_eljt5"]
-[ext_resource type="Texture2D" uid="uid://cjs7l1n3i1on5" path="res://resources/shader_particles/orb5.png" id="2_eqtk5"]
+[ext_resource type="Texture2D" uid="uid://cteyj2dmv710a" path="res://resources/small_particles/dot.png" id="2_cpxhj"]
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 collision_layer = 2
@@ -17,33 +17,30 @@ zoom = Vector2(0.5, 0.5)
 
 [node name="1" type="Sprite2D" parent="WeaponSlots"]
 position = Vector2(-40, 32)
-scale = Vector2(0.025, 0.025)
-texture = ExtResource("2_eqtk5")
+texture = ExtResource("2_cpxhj")
 
 [node name="2" type="Sprite2D" parent="WeaponSlots"]
 position = Vector2(-40, 0)
-scale = Vector2(0.025, 0.025)
-texture = ExtResource("2_eqtk5")
+texture = ExtResource("2_cpxhj")
 
 [node name="3" type="Sprite2D" parent="WeaponSlots"]
 position = Vector2(-40, -32)
-scale = Vector2(0.025, 0.025)
-texture = ExtResource("2_eqtk5")
+texture = ExtResource("2_cpxhj")
 
 [node name="4" type="Sprite2D" parent="WeaponSlots"]
 position = Vector2(40, 32)
-scale = Vector2(0.025, 0.025)
-texture = ExtResource("2_eqtk5")
+rotation = 3.14159
+texture = ExtResource("2_cpxhj")
 
 [node name="5" type="Sprite2D" parent="WeaponSlots"]
 position = Vector2(40, 0)
-scale = Vector2(0.025, 0.025)
-texture = ExtResource("2_eqtk5")
+rotation = 3.14159
+texture = ExtResource("2_cpxhj")
 
 [node name="6" type="Sprite2D" parent="WeaponSlots"]
 position = Vector2(40, -32)
-scale = Vector2(0.025, 0.025)
-texture = ExtResource("2_eqtk5")
+rotation = 3.14159
+texture = ExtResource("2_cpxhj")
 
 [node name="ToolHolder" type="Node2D" parent="."]
 

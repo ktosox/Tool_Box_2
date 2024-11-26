@@ -4,18 +4,21 @@ class_name State
 
 extends Node
 
-var stateMachine = null
+var state_machine : StateMachine
 
 func _ready():
 	set_process(false)
 	set_physics_process(false)
 	await owner.ready
 
-func enter(msg = {}):
+func enter(msg = {}) -> void:
 	
 	pass
 
+func _process(delta: float) -> void:
+	
+	pass
 
-func exit():
+func exit() -> void:
 	
 	pass
