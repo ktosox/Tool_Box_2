@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://do2if1haihwhp"]
+[gd_scene load_steps=8 format=3 uid="uid://do2if1haihwhp"]
 
 [ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/ship_parts/weapon.gd" id="1_2xvm2"]
 [ext_resource type="PackedScene" uid="uid://cu6565wpxaocr" path="res://projects/vam-pirate_ship-vivors_2/detector.tscn" id="2_vob72"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/ship_parts/idle.gd" id="4_rt6m5"]
 [ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/ship_parts/warmup.gd" id="5_4mmds"]
 [ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/ship_parts/cooldown.gd" id="6_770gn"]
+[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/ship_parts/no_ammo.gd" id="7_kp1qs"]
 
 [node name="WeaponBase" type="Node2D"]
 script = ExtResource("1_2xvm2")
@@ -13,6 +14,7 @@ type = 1
 
 [node name="Detector" parent="." instance=ExtResource("2_vob72")]
 collision_mask = 16
+tracked_groups = ["enemy"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Detector"]
 polygon = PackedVector2Array(40, 120, 40, -120, -340, -300, -340, 300)
@@ -29,14 +31,48 @@ script = ExtResource("5_4mmds")
 
 [node name="Cooldown" type="Node" parent="StateMachine"]
 script = ExtResource("6_770gn")
+cooldown_time = 0.8
 
-[node name="Button" type="Button" parent="."]
+[node name="NoAmmo" type="Node" parent="StateMachine"]
+script = ExtResource("7_kp1qs")
+
+[node name="TargetEnter" type="Button" parent="."]
+visible = false
 offset_right = 8.0
 offset_bottom = 8.0
-text = "fake target"
+text = "fake target enter"
 
 [node name="AutoLoader" type="Timer" parent="."]
+wait_time = 1.2
+autostart = true
 
+[node name="Gun" type="Node2D" parent="."]
+rotation = 3.14159
+
+[node name="Line2D" type="Line2D" parent="Gun"]
+points = PackedVector2Array(0, 0, 60, 0)
+width = 40.0
+
+[node name="TargetExit" type="Button" parent="."]
+visible = false
+offset_left = 177.0
+offset_top = 28.0
+offset_right = 303.0
+offset_bottom = 59.0
+text = "fake target exit"
+
+[node name="Ammo" type="Label" parent="."]
+visible = false
+offset_left = 68.0
+offset_top = 135.0
+offset_right = 128.0
+offset_bottom = 158.0
+text = "Ammo: "
+
+[connection signal="target_acquired" from="Detector" to="." method="_on_detector_target_acquired"]
+[connection signal="target_lost" from="Detector" to="." method="_on_detector_target_lost"]
 [connection signal="warmup_completed" from="StateMachine/Warmup" to="." method="_on_warmup_warmup_completed"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="cooldown_completed" from="StateMachine/Cooldown" to="." method="_on_cooldown_cooldown_completed"]
+[connection signal="pressed" from="TargetEnter" to="." method="_on_target_enter_pressed"]
 [connection signal="timeout" from="AutoLoader" to="." method="_on_auto_loader_timeout"]
+[connection signal="pressed" from="TargetExit" to="." method="_on_target_exit_pressed"]

@@ -8,5 +8,9 @@ collision_mask = 0
 monitorable = false
 script = ExtResource("1_r2ui6")
 
+[node name="SanityCheck" type="Timer" parent="."]
+wait_time = 0.8
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="SanityCheck" to="." method="_on_sanity_check_timeout"]

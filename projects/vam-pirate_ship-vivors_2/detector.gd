@@ -28,7 +28,7 @@ func _on_body_entered(body: Node2D) -> void:
 	if body_valid_check(body):
 		current_target = body
 		emit_signal("target_acquired",current_target)
-		
+		$SanityCheck.start()
 	pass # Replace with function body.
 
 
@@ -44,7 +44,22 @@ func _on_body_exited(body: Node2D) -> void:
 		
 		emit_signal("target_lost")
 		current_target = null
+		$SanityCheck.stop()
+		
+		
+	pass # Replace with function body.
 
+
+func _on_sanity_check_timeout() -> void:
+	if !is_instance_valid(current_target):
+		if get_overlapping_bodies().size()>0:
+			for potential_target in get_overlapping_bodies():
+				if body_valid_check(potential_target):
+					current_target = potential_target
+					emit_signal("target_acquired",current_target)
+					return
 		
-		
+		emit_signal("target_lost")
+		current_target = null
+		$SanityCheck.stop()
 	pass # Replace with function body.

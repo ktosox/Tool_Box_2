@@ -11,7 +11,7 @@ radius = 22.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_8fn3b"]
 radius = 520.0
 
-[node name="MagneticMine" type="CharacterBody2D"]
+[node name="MagneticMine" type="CharacterBody2D" groups=["enemy"]]
 collision_layer = 16
 collision_mask = 22
 script = ExtResource("1_to0dv")

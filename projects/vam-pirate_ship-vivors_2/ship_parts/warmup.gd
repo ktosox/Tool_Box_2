@@ -1,10 +1,11 @@
 extends State
 
+signal warmup_completed
+
 var wait_time : float
 
 @export var warmup_time = 0.5
 
-signal warmup_completed
 
 func enter(msg = {}) -> void:
 	wait_time = 0
@@ -13,8 +14,8 @@ func enter(msg = {}) -> void:
 func _process(delta: float) -> void:
 	wait_time += delta
 	if wait_time > warmup_time:
-		emit_signal("warmup_completed")
 		set_process(false)
+		emit_signal("warmup_completed")
 	
 	pass
 

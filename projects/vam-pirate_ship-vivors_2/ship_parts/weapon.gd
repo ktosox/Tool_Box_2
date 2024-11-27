@@ -26,33 +26,77 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if target != null:
+		$Gun.look_at(target.global_position)
 	pass
 
-func fire() -> bool: # returnd true is shot fired and flase if no ammo
+
+func attempt_attack() -> bool: # returns true if attack went off
+	if current_ammo < 1:
+		$StateMachine.transition_to("NoAmmo")
+		if $AutoLoader.is_stopped():
+			$AutoLoader.start()
+		return false
+	fire()
+	
+	return true
+
+func fire() -> void:
+	assert($StateMachine/Cooldown.is_processing() == false)
 	print("pew")
+	current_ammo -= 1
 	if $AutoLoader.is_stopped():
 		$AutoLoader.start()
-	return true
-	pass
+	$StateMachine.transition_to("Cooldown")
+	
 
 
 
 
-func _on_button_pressed() -> void:
-	$StateMachine.transition_to("Warmup")
-	pass # Replace with function body.
 
 
 func _on_warmup_warmup_completed() -> void:
-	if fire():
-		$StateMachine.transition_to("cooldown")
-	else:
-		$StateMachine.transition_to("no")
+	attempt_attack()
+	pass # Replace with function body.
+
+
+func _on_cooldown_cooldown_completed() -> void:
+	attempt_attack()
 	pass # Replace with function body.
 
 
 func _on_auto_loader_timeout() -> void:
+	
 	current_ammo = min(max_ammo, current_ammo+1)
+	
+	if $StateMachine.state == $StateMachine/NoAmmo:
+		attempt_attack()
 	if current_ammo == max_ammo:
 		$AutoLoader.stop()
+	$Ammo.text = "Ammo: " + str(current_ammo)
+	pass # Replace with function body.
+
+
+func _on_target_enter_pressed() -> void:
+	if $StateMachine.state == $StateMachine/Idle:
+		$StateMachine.transition_to("Warmup")
+	pass # Replace with function body.
+
+
+func _on_target_exit_pressed() -> void:
+	$StateMachine.transition_to("Idle")
+	pass # Replace with function body.
+
+
+func _on_detector_target_acquired(new_target: Node2D) -> void:
+	target = new_target
+	if $StateMachine.state == $StateMachine/Idle:
+		$StateMachine.transition_to("Warmup")
+	pass # Replace with function body.
+
+
+func _on_detector_target_lost() -> void:
+	$StateMachine.transition_to("Idle")
+	target = null
+	$Gun.rotation_degrees = 180
 	pass # Replace with function body.
