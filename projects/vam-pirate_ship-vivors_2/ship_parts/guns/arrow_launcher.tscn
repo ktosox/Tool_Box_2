@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://daf3n6gi64yqh"]
+
+[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/ship_parts/guns/arrow_launcher.gd" id="1_ko623"]
+[ext_resource type="PackedScene" uid="uid://bqf3203pt5rc3" path="res://projects/vam-pirate_ship-vivors_2/ship_parts/guns/arrow_attack.tscn" id="2_0fd07"]
+
+[node name="ArrowLauncher" type="Node2D"]
+script = ExtResource("1_ko623")
+arrow_scene = ExtResource("2_0fd07")
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(0, 0, 60, 0)
+width = 40.0
+
+[node name="PlaceArrowHere" type="Marker2D" parent="."]
+position = Vector2(44, 0)
