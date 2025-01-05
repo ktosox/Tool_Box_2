@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://daiimdiaxk1q5"]
+
+[ext_resource type="Script" path="res://experimental/RPS/rps.gd" id="1_o2s77"]
+[ext_resource type="PackedScene" uid="uid://ctqqlwsyigr1t" path="res://experimental/RPS/player_box.tscn" id="2_h70g4"]
+
+[node name="RPS" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o2s77")
+
+[node name="Fight" type="Button" parent="."]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 374.0
+offset_right = 95.0
+offset_bottom = 405.0
+text = "FIGHT!"
+
+[node name="ResultBox" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="ColorRect" parent="." instance=ExtResource("2_h70g4")]
+layout_mode = 0
+
+[node name="Results" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 399.0
+offset_top = 170.0
+offset_right = 1071.0
+offset_bottom = 563.0
+columns = 9
+
+[node name="Top" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 394.0
+offset_top = 88.0
+offset_right = 434.0
+offset_bottom = 128.0
+columns = 10
+
+[node name="Side" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 170.0
+offset_right = 322.0
+offset_bottom = 210.0

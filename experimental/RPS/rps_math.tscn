@@ -1,0 +1,68 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6s48dh32biqq"]
+
+[ext_resource type="Script" path="res://experimental/RPS/rps_math.gd" id="1_c10lf"]
+
+[node name="RPS_math" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c10lf")
+
+[node name="Center" type="Node2D" parent="."]
+position = Vector2(605, 285)
+
+[node name="Line2" type="Line2D" parent="Center"]
+points = PackedVector2Array(0, 0, 0, 0)
+width = 1.0
+default_color = Color(0.98795, 0, 0.546771, 1)
+
+[node name="Line1" type="Line2D" parent="Center"]
+points = PackedVector2Array(0, 0, 0, 0)
+width = 1.0
+default_color = Color(0.365576, 0.630643, 0.960469, 1)
+
+[node name="Camera2D" type="Camera2D" parent="Center"]
+zoom = Vector2(10, 10)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="SetLine1" type="LineEdit" parent="CanvasLayer"]
+offset_left = 1015.0
+offset_top = 28.0
+offset_right = 1082.06
+offset_bottom = 59.0
+
+[node name="Label" type="Label" parent="CanvasLayer/SetLine1"]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 2.0
+offset_right = 124.0
+offset_bottom = 25.0
+text = "Angle1"
+
+[node name="SetLine2" type="LineEdit" parent="CanvasLayer"]
+offset_left = 1016.0
+offset_top = 72.0
+offset_right = 1083.06
+offset_bottom = 103.0
+
+[node name="Label" type="Label" parent="CanvasLayer/SetLine2"]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 2.0
+offset_right = 124.0
+offset_bottom = 25.0
+text = "Angle2
+"
+
+[node name="Area" type="Label" parent="CanvasLayer"]
+offset_left = 1081.0
+offset_top = 166.0
+offset_right = 1121.0
+offset_bottom = 189.0
+
+[connection signal="text_submitted" from="CanvasLayer/SetLine1" to="." method="_on_set_line_1_text_submitted"]
+[connection signal="text_submitted" from="CanvasLayer/SetLine2" to="." method="_on_set_line_2_text_submitted"]
