@@ -1,8 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://cwtl5c1tu4ppe"]
+[gd_scene load_steps=3 format=3 uid="uid://cwtl5c1tu4ppe"]
 
 [ext_resource type="Script" path="res://systems/settings_system/settings_autoload.gd" id="1_0ikpp"]
+[ext_resource type="PackedScene" uid="uid://cwa2cv6lsgki6" path="res://systems/settings_system/sound_setter.tscn" id="2_fwc0t"]
 
-[node name="Settings_Autoload" type="Control"]
+[node name="SettingsAutoload" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -10,3 +11,24 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0ikpp")
+
+[node name="SettingsWindow" type="CanvasLayer" parent="."]
+
+[node name="Sound" type="VBoxContainer" parent="SettingsWindow"]
+offset_right = 792.0
+offset_bottom = 300.0
+alignment = 1
+
+[node name="SoundSetter" parent="SettingsWindow/Sound" instance=ExtResource("2_fwc0t")]
+layout_mode = 2
+color = Color(0.795964, 2.5028e-06, 0.50109, 1)
+title_overwrite = "Main"
+
+[node name="SoundSetter2" parent="SettingsWindow/Sound" instance=ExtResource("2_fwc0t")]
+layout_mode = 2
+bus_name = "Effects"
+
+[node name="SoundSetter3" parent="SettingsWindow/Sound" instance=ExtResource("2_fwc0t")]
+layout_mode = 2
+color = Color(0.249596, 0.519648, 0.243376, 1)
+bus_name = "Music"

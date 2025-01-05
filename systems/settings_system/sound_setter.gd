@@ -2,6 +2,8 @@ extends ColorRect
 
 @export var bus_name = "Master"
 
+@export var title_overwrite : String
+
 var _bus_index = 0
 
 # Called when the node enters the scene tree for the first time.
@@ -11,6 +13,10 @@ func _ready() -> void:
 	%MuteButton.button_pressed = AudioServer.is_bus_mute(_bus_index)
 	%VolumeSlider.value = db_to_linear(AudioServer.get_bus_volume_db(_bus_index))
 	$ExampleSound.bus = bus_name
+	if title_overwrite.is_empty():
+		%Title.text = bus_name
+	else:
+		%Title.text = title_overwrite
 	pass # Replace with function body.
 	
 	
