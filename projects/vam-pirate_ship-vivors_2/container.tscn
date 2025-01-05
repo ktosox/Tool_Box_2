@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxpqdt2fjn6lp"]
+
+[ext_resource type="PackedScene" uid="uid://cuosdqgoqst5k" path="res://projects/vam-pirate_ship-vivors_2/window_to_3d.tscn" id="1_gdop5"]
+[ext_resource type="PackedScene" uid="uid://dj7ayq0k3b4ve" path="res://projects/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/cargo-container-a.glb" id="2_vl3tw"]
+
+[node name="Container" type="Node2D"]
+
+[node name="WindowTo3D" parent="." instance=ExtResource("1_gdop5")]
+offset_left = -648.0
+offset_top = -428.0
+offset_right = -488.0
+offset_bottom = -268.0
+load_this_on_start = ExtResource("2_vl3tw")

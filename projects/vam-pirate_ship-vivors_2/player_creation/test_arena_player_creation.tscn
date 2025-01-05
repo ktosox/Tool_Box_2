@@ -27,6 +27,7 @@ position = Vector2(818, 377)
 
 [node name="Pickup" parent="." instance=ExtResource("4_q6ces")]
 position = Vector2(1113, 454)
+rarity = 2
 
 [connection signal="part_selected" from="CanvasLayer/BuildingPanel/Back/Layout/Body" to="." method="_on_body_part_selected"]
 [connection signal="part_selected" from="CanvasLayer/BuildingPanel/Back/Layout/Weapon" to="." method="_on_weapon_part_selected"]

@@ -28,7 +28,6 @@ collision_mask = 2
 shape = SubResource("CircleShape2D_bankm")
 
 [node name="Smoke5" type="Sprite2D" parent="."]
-modulate = Color(0.129412, 1, 0.32549, 1)
 scale = Vector2(0.145, 0.145)
 texture = ExtResource("3_6gjty")
 
