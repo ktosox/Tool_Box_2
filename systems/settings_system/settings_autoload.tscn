@@ -1,7 +1,34 @@
-[gd_scene load_steps=3 format=3 uid="uid://cwtl5c1tu4ppe"]
+[gd_scene load_steps=5 format=3 uid="uid://cwtl5c1tu4ppe"]
 
 [ext_resource type="Script" path="res://systems/settings_system/settings_autoload.gd" id="1_0ikpp"]
 [ext_resource type="PackedScene" uid="uid://cwa2cv6lsgki6" path="res://systems/settings_system/sound_setter.tscn" id="2_fwc0t"]
+
+[sub_resource type="Shader" id="Shader_bw435"]
+code = "shader_type canvas_item;
+// code lifted from the shader tutorail on the documentation
+
+uniform sampler2D screen_texture : hint_screen_texture, repeat_disable, filter_nearest;
+
+uniform float brightness = 1.0;
+uniform float contrast = 1.0;
+uniform float saturation = 1.0;
+
+void fragment() {
+    vec3 c = textureLod(screen_texture, SCREEN_UV, 0.0).rgb;
+
+    c.rgb = mix(vec3(0.0), c.rgb, brightness);
+    c.rgb = mix(vec3(0.5), c.rgb, contrast);
+    c.rgb = mix(vec3(dot(vec3(1.0), c.rgb) * 0.33333), c.rgb, saturation);
+
+    COLOR.rgb = c;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_adrdl"]
+shader = SubResource("Shader_bw435")
+shader_parameter/brightness = 1.0
+shader_parameter/contrast = 1.0
+shader_parameter/saturation = 1.0
 
 [node name="SettingsAutoload" type="Control"]
 layout_mode = 3
@@ -12,11 +39,25 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0ikpp")
 
+[node name="ScreenCorrection" type="CanvasLayer" parent="."]
+
+[node name="ShaderHolder" type="ColorRect" parent="ScreenCorrection"]
+material = SubResource("ShaderMaterial_adrdl")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SettingsButton" type="CanvasLayer" parent="."]
+
 [node name="SettingsWindow" type="CanvasLayer" parent="."]
 
 [node name="Sound" type="VBoxContainer" parent="SettingsWindow"]
-offset_right = 792.0
-offset_bottom = 300.0
+offset_left = 767.0
+offset_top = 421.0
+offset_right = 1233.0
+offset_bottom = 697.0
 alignment = 1
 
 [node name="SoundSetter" parent="SettingsWindow/Sound" instance=ExtResource("2_fwc0t")]

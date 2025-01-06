@@ -14,6 +14,10 @@ config/name="Tool_Box_2"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SettingsAutoload="*res://systems/settings_system/settings_autoload.tscn"
+
 [display]
 
 window/size/viewport_width=1280
