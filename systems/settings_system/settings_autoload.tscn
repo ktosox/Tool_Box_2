@@ -40,6 +40,7 @@ grow_vertical = 2
 script = ExtResource("1_0ikpp")
 
 [node name="ScreenCorrection" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="ShaderHolder" type="ColorRect" parent="ScreenCorrection"]
 material = SubResource("ShaderMaterial_adrdl")
@@ -51,7 +52,14 @@ grow_vertical = 2
 
 [node name="SettingsButton" type="CanvasLayer" parent="."]
 
+[node name="TextureButton" type="TextureButton" parent="SettingsButton"]
+offset_left = 1207.0
+offset_top = 34.0
+offset_right = 1247.0
+offset_bottom = 74.0
+
 [node name="SettingsWindow" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Sound" type="VBoxContainer" parent="SettingsWindow"]
 offset_left = 767.0
