@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://26f03wi57ufl"]
+
+[ext_resource type="Script" path="res://experimental/market/value_box.gd" id="1_j8kww"]
+
+[node name="ValueBox" type="VBoxContainer"]
+script = ExtResource("1_j8kww")
+
+[node name="Top" type="Control" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 10.0
+
+[node name="Value" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="Bot" type="Control" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 10.0

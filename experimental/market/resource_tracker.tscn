@@ -1,0 +1,57 @@
+[gd_scene load_steps=2 format=3 uid="uid://cji2mp2aljp02"]
+
+[ext_resource type="Script" path="res://experimental/market/resource_tracker.gd" id="1_s2hqy"]
+
+[node name="ResourceTracker" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -9.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s2hqy")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.103007, 8.66354e-06, 0.956875, 1)
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 114.0
+offset_right = 213.0
+offset_bottom = 145.0
+text = "curent value"
+
+[node name="ValueBoxContainer" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 448.0
+offset_top = 210.0
+offset_right = 700.0
+offset_bottom = 627.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "spawn random"
+
+[node name="TradingCycle" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="TestTrades" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="TradingCycle" to="." method="_on_trading_cycle_timeout"]
+[connection signal="timeout" from="TestTrades" to="." method="_on_test_trades_timeout"]
