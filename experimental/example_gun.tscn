@@ -6,7 +6,7 @@
 [sub_resource type="Resource" id="Resource_2n8wj"]
 script = ExtResource("2_58ue1")
 damage = 5
-attakc_type = 0
+attack_type = 0
 damage_type = 0
 penetration = 0
 accuracy = 0.8
