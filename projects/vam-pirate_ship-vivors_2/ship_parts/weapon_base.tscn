@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://do2if1haihwhp"]
 
-[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/ship_parts/weapon.gd" id="1_2xvm2"]
+[ext_resource type="Script" uid="uid://bb05md2detccf" path="res://projects/vam-pirate_ship-vivors_2/ship_parts/weapon.gd" id="1_2xvm2"]
 [ext_resource type="PackedScene" uid="uid://cu6565wpxaocr" path="res://projects/vam-pirate_ship-vivors_2/detector.tscn" id="2_vob72"]
-[ext_resource type="Script" path="res://systems/state_machine/state_machine.gd" id="3_mvt4j"]
-[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/ship_parts/idle.gd" id="4_rt6m5"]
-[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/ship_parts/warmup.gd" id="5_4mmds"]
-[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/ship_parts/cooldown.gd" id="6_770gn"]
-[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/ship_parts/no_ammo.gd" id="7_kp1qs"]
+[ext_resource type="Script" uid="uid://de2eyq67f53l" path="res://systems/state_machine/state_machine.gd" id="3_mvt4j"]
+[ext_resource type="Script" uid="uid://c8hat1wjr7auv" path="res://projects/vam-pirate_ship-vivors_2/ship_parts/idle.gd" id="4_rt6m5"]
+[ext_resource type="Script" uid="uid://bdtlda1ngq6hx" path="res://projects/vam-pirate_ship-vivors_2/ship_parts/warmup.gd" id="5_4mmds"]
+[ext_resource type="Script" uid="uid://d3hrqru7yq8w2" path="res://projects/vam-pirate_ship-vivors_2/ship_parts/cooldown.gd" id="6_770gn"]
+[ext_resource type="Script" uid="uid://bu1wac8desit1" path="res://projects/vam-pirate_ship-vivors_2/ship_parts/no_ammo.gd" id="7_kp1qs"]
 
 [node name="WeaponBase" type="Node2D"]
 script = ExtResource("1_2xvm2")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://xr0rqesr0eri"]
 
-[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/player_creation/part_selector.gd" id="1_tior0"]
+[ext_resource type="Script" uid="uid://cgjve11unc3l4" path="res://projects/vam-pirate_ship-vivors_2/player_creation/part_selector.gd" id="1_tior0"]
 [ext_resource type="Texture2D" uid="uid://cq8muruehj4nv" path="res://resources/ui_icons/pirate/pirate-captain.png" id="2_vhv4r"]
 [ext_resource type="Texture2D" uid="uid://cbv0t83mpq15f" path="res://resources/ui_icons/pirate/crossed-bones.png" id="3_h1k17"]
 

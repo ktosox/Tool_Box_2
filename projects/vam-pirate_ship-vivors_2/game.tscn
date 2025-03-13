@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://bke5odo8f6qx2"]
 
-[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/player_ship.gd" id="1_wrg1n"]
+[ext_resource type="Script" uid="uid://cy2t2gs8l3qgh" path="res://projects/vam-pirate_ship-vivors_2/player_ship.gd" id="1_wrg1n"]
 [ext_resource type="PackedScene" uid="uid://byqhyixw2emev" path="res://projects/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/boat-fan.glb" id="2_3dar4"]
 [ext_resource type="Texture2D" uid="uid://d11ofdafmrw2k" path="res://resources/shader_particles/smoke2.png" id="3_wf3vw"]
 [ext_resource type="PackedScene" uid="uid://cjsb0u1e8f3f4" path="res://projects/vam-pirate_ship-vivors_2/enemies/enemy_gun.tscn" id="4_ohqq1"]
@@ -45,8 +45,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hqwsm"]
 _data = {
-"RESET": SubResource("Animation_lbw2p"),
-"bobbing": SubResource("Animation_s5rjf")
+&"RESET": SubResource("Animation_lbw2p"),
+&"bobbing": SubResource("Animation_s5rjf")
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nnxsf"]

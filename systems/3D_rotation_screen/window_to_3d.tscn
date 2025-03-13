@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://2xjxs7aqgbhg"]
 
-[ext_resource type="Script" path="res://systems/3D_rotation_screen/window_to_3d.gd" id="1_3rf8d"]
+[ext_resource type="Script" uid="uid://dw03j71q3ukdk" path="res://systems/3D_rotation_screen/window_to_3d.gd" id="1_3rf8d"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_gci3o"]
 

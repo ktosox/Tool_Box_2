@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c1abfq8f6fdig"]
 
-[ext_resource type="Script" path="res://experimental/example_gun_shot.gd" id="1_8ckwk"]
+[ext_resource type="Script" uid="uid://bigrgbkt5po82" path="res://experimental/example_gun_shot.gd" id="1_8ckwk"]
 [ext_resource type="Texture2D" uid="uid://onm5xeg5u5wu" path="res://resources/shader_particles/orb1.png" id="1_y8e3b"]
 
 [node name="ExampleGunShot" type="RayCast2D"]

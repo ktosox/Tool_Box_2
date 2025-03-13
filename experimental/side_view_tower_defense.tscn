@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://wo4e013s4ki"]
 
-[ext_resource type="Script" path="res://experimental/side_view_tower_defense.gd" id="1_lmps5"]
+[ext_resource type="Script" uid="uid://b0qg2opa73eto" path="res://experimental/side_view_tower_defense.gd" id="1_lmps5"]
 [ext_resource type="PackedScene" uid="uid://qqjji0wexgsm" path="res://experimental/hit_box.tscn" id="1_n2rhh"]
-[ext_resource type="Script" path="res://experimental/target_dummy.gd" id="2_qppje"]
+[ext_resource type="Script" uid="uid://c7mi31qbqe2my" path="res://experimental/target_dummy.gd" id="2_qppje"]
 [ext_resource type="PackedScene" uid="uid://dkn2kw0w413ys" path="res://experimental/example_gun.tscn" id="5_e4amm"]
 [ext_resource type="PackedScene" uid="uid://xtubqpb1avbh" path="res://experimental/health_shower.tscn" id="6_fpes2"]
 

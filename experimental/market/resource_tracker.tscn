@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cji2mp2aljp02"]
 
-[ext_resource type="Script" path="res://experimental/market/resource_tracker.gd" id="1_s2hqy"]
+[ext_resource type="Script" uid="uid://ce54myysovlqu" path="res://experimental/market/resource_tracker.gd" id="1_s2hqy"]
 
 [node name="ResourceTracker" type="Control"]
 layout_mode = 3

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c6s48dh32biqq"]
 
-[ext_resource type="Script" path="res://experimental/RPS/rps_math.gd" id="1_c10lf"]
+[ext_resource type="Script" uid="uid://ex6bjmq2jb1m" path="res://experimental/RPS/rps_math.gd" id="1_c10lf"]
 
 [node name="RPS_math" type="Control"]
 layout_mode = 3

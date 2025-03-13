@@ -1,7 +1,22 @@
 [gd_scene load_steps=6 format=3 uid="uid://bqf3203pt5rc3"]
 
-[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/ship_parts/guns/arrow_attack.gd" id="1_lnpub"]
+[ext_resource type="Script" uid="uid://be0j4vibswr68" path="res://projects/vam-pirate_ship-vivors_2/ship_parts/guns/arrow_attack.gd" id="1_lnpub"]
 [ext_resource type="Texture2D" uid="uid://cipkor1tymxk1" path="res://resources/small_particles/square_tiny.png" id="2_s36tm"]
+
+[sub_resource type="Animation" id="Animation_4j6gg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Projectile:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_tq368"]
 resource_name = "Shoot"
@@ -33,25 +48,10 @@ tracks/1/keys = {
 }]
 }
 
-[sub_resource type="Animation" id="Animation_4j6gg"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Projectile:progress_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_k2i1b"]
 _data = {
-"RESET": SubResource("Animation_4j6gg"),
-"Shoot": SubResource("Animation_tq368")
+&"RESET": SubResource("Animation_4j6gg"),
+&"Shoot": SubResource("Animation_tq368")
 }
 
 [node name="ArrowAttack" type="Path2D"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://26f03wi57ufl"]
 
-[ext_resource type="Script" path="res://experimental/market/value_box.gd" id="1_j8kww"]
+[ext_resource type="Script" uid="uid://duwg6c6m1bmec" path="res://experimental/market/value_box.gd" id="1_j8kww"]
 
 [node name="ValueBox" type="VBoxContainer"]
 script = ExtResource("1_j8kww")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cneukwlht7ocs"]
 
-[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/pickup.gd" id="1_5by2i"]
+[ext_resource type="Script" uid="uid://df5ligdlh120g" path="res://projects/vam-pirate_ship-vivors_2/pickup.gd" id="1_5by2i"]
 [ext_resource type="PackedScene" uid="uid://cu6565wpxaocr" path="res://projects/vam-pirate_ship-vivors_2/detector.tscn" id="2_ebf4v"]
 [ext_resource type="Texture2D" uid="uid://dedvjl80bstke" path="res://resources/shader_particles/smoke5.png" id="3_6gjty"]
 

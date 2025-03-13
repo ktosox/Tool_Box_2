@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://daf3n6gi64yqh"]
 
-[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/ship_parts/guns/arrow_launcher.gd" id="1_ko623"]
+[ext_resource type="Script" uid="uid://ca6i60f3lqflq" path="res://projects/vam-pirate_ship-vivors_2/ship_parts/guns/arrow_launcher.gd" id="1_ko623"]
 [ext_resource type="PackedScene" uid="uid://bqf3203pt5rc3" path="res://projects/vam-pirate_ship-vivors_2/ship_parts/guns/arrow_attack.tscn" id="2_0fd07"]
 
 [node name="ArrowLauncher" type="Node2D"]

@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://dlb50nvbe20m8"]
 
-[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/enemies/explosion.gd" id="1_3bpcu"]
+[ext_resource type="Script" uid="uid://bvi1feyvb4a6g" path="res://projects/vam-pirate_ship-vivors_2/enemies/explosion.gd" id="1_3bpcu"]
 [ext_resource type="Texture2D" uid="uid://cltl2m3w3n6tj" path="res://resources/shader_particles/smoke6.png" id="1_fkb55"]
 [ext_resource type="Texture2D" uid="uid://dsl8w7dvr3vv5" path="res://resources/shader_particles/smoke3.png" id="2_7wxm6"]
-[ext_resource type="Script" path="res://systems/attack_system/attack_data.gd" id="2_ihn2i"]
+[ext_resource type="Script" uid="uid://ddqg57t3rsgoj" path="res://systems/attack_system/attack_data.gd" id="2_ihn2i"]
 
 [sub_resource type="Resource" id="Resource_di7b7"]
 script = ExtResource("2_ihn2i")
@@ -122,8 +122,8 @@ tracks/4/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3v877"]
 _data = {
-"RESET": SubResource("Animation_lyxvq"),
-"new_animation": SubResource("Animation_fqxiq")
+&"RESET": SubResource("Animation_lyxvq"),
+&"new_animation": SubResource("Animation_fqxiq")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8nttn"]

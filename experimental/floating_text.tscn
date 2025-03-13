@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bnjgj2ibkmq71"]
 
-[ext_resource type="Script" path="res://experimental/floating_text.gd" id="1_eerep"]
+[ext_resource type="Script" uid="uid://ri37n0wuamyo" path="res://experimental/floating_text.gd" id="1_eerep"]
 [ext_resource type="FontFile" uid="uid://dgcr1y50y3btp" path="res://resources/fonts/transformers-movie/Transformers Movie.ttf" id="2_xmf4l"]
 
 [sub_resource type="Animation" id="Animation_my66u"]
@@ -60,8 +60,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jebtf"]
 _data = {
-"Pop up": SubResource("Animation_my66u"),
-"RESET": SubResource("Animation_wkrqr")
+&"Pop up": SubResource("Animation_my66u"),
+&"RESET": SubResource("Animation_wkrqr")
 }
 
 [node name="FloatingText" type="Node2D"]

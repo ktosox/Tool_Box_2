@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://vwlkff015x7e"]
 
-[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/player.gd" id="1_eljt5"]
+[ext_resource type="Script" uid="uid://b4rgpy68pvrf1" path="res://projects/vam-pirate_ship-vivors_2/player.gd" id="1_eljt5"]
 [ext_resource type="Texture2D" uid="uid://cteyj2dmv710a" path="res://resources/small_particles/dot.png" id="2_cpxhj"]
 [ext_resource type="PackedScene" uid="uid://do2if1haihwhp" path="res://projects/vam-pirate_ship-vivors_2/ship_parts/weapon_base.tscn" id="3_mgvbm"]
 

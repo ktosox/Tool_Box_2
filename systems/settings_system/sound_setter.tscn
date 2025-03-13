@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cwa2cv6lsgki6"]
 
-[ext_resource type="Script" path="res://systems/settings_system/sound_setter.gd" id="1_wvucb"]
+[ext_resource type="Script" uid="uid://bsq0s24t8b4cj" path="res://systems/settings_system/sound_setter.gd" id="1_wvucb"]
 [ext_resource type="AudioStream" uid="uid://d1j7xlb6utcoj" path="res://systems/settings_system/beep 2.wav" id="2_otl65"]
 
 [sub_resource type="Animation" id="Animation_fo8gr"]
@@ -35,8 +35,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8o6xe"]
 _data = {
-"RESET": SubResource("Animation_fo8gr"),
-"auto_play": SubResource("Animation_8n614")
+&"RESET": SubResource("Animation_fo8gr"),
+&"auto_play": SubResource("Animation_8n614")
 }
 
 [node name="SoundSetter" type="ColorRect"]

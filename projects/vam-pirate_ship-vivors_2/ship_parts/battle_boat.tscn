@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cxv8ea5o2yvi4"]
 
-[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/ship_part.gd" id="1_v85v1"]
+[ext_resource type="Script" uid="uid://rohxe3o6ogpw" path="res://projects/vam-pirate_ship-vivors_2/ship_part.gd" id="1_v85v1"]
 [ext_resource type="PackedScene" uid="uid://cuosdqgoqst5k" path="res://projects/vam-pirate_ship-vivors_2/window_to_3d.tscn" id="2_c63n5"]
 [ext_resource type="PackedScene" uid="uid://cs1yp766n3umv" path="res://projects/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/boat-speed-f.glb" id="3_fhhqj"]
 

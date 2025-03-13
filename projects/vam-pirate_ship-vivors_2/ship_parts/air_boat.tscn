@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://wnxwn405uush"]
 
-[ext_resource type="Script" path="res://projects/vam-pirate_ship-vivors_2/ship_part.gd" id="1_x3suh"]
+[ext_resource type="Script" uid="uid://rohxe3o6ogpw" path="res://projects/vam-pirate_ship-vivors_2/ship_part.gd" id="1_x3suh"]
 [ext_resource type="PackedScene" uid="uid://cuosdqgoqst5k" path="res://projects/vam-pirate_ship-vivors_2/window_to_3d.tscn" id="2_hl7f6"]
 [ext_resource type="PackedScene" uid="uid://byqhyixw2emev" path="res://projects/vam-pirate_ship-vivors_2/KenneyWatercraft/Models/GLB format/boat-fan.glb" id="3_hamwg"]
 

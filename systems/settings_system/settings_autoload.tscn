@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cwtl5c1tu4ppe"]
 
-[ext_resource type="Script" path="res://systems/settings_system/settings_autoload.gd" id="1_0ikpp"]
+[ext_resource type="Script" uid="uid://dn2wctl5o2v7" path="res://systems/settings_system/settings_autoload.gd" id="1_0ikpp"]
 [ext_resource type="PackedScene" uid="uid://cwa2cv6lsgki6" path="res://systems/settings_system/sound_setter.tscn" id="2_fwc0t"]
 
 [sub_resource type="Shader" id="Shader_bw435"]
