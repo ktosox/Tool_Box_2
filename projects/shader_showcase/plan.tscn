@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://iu5ayebkifcy"]
+
+[ext_resource type="FontFile" uid="uid://byrfox67tynuj" path="res://resources/fonts/Fibberish v1.0/fibberish.ttf" id="1_gkg47"]
+
+[node name="Plan" type="RichTextLabel"]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("1_gkg47")
+theme_override_font_sizes/normal_font_size = 32
+text = "What I want?
+ - a cool shader showcase
+ - collection of stuff I made previously"

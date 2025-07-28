@@ -1,0 +1,14 @@
+[gd_resource type="Shader" format=3 uid="uid://53l8un1kl5w8"]
+
+[resource]
+code = "shader_type canvas_item;
+uniform vec2 scrollSpeed = vec2(1.0,1.0);
+uniform sampler2D texture2;
+uniform sampler2D gradient;
+
+void fragment(){
+	float color1 = texture(TEXTURE, UV + scrollSpeed * TIME).r;
+	float color2 = texture(texture2, UV + scrollSpeed * TIME).r;
+	float energ = color1 * color2 - (0.4 - UV.y) - (smoothstep(0.0,0.3,abs(UV.x-0.5)*0.5) * 3.0 );
+	COLOR = texture(gradient, vec2(energ));
+}"
