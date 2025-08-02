@@ -7,10 +7,13 @@ texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -665.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/normal_font = ExtResource("1_gkg47")
 theme_override_font_sizes/normal_font_size = 32
 text = "What I want?
  - a cool shader showcase
- - collection of stuff I made previously"
+ - collection of stuff I made previously
+Draft 1:
+A collection of screen shaders that can be selected from a list, paired with static images that can be swapped around."

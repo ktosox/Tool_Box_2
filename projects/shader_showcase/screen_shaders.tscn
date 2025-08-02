@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://tmfjguyhas2u"]
+
+[ext_resource type="Script" uid="uid://k10iq4ljbxab" path="res://projects/shader_showcase/screen_shaders.gd" id="1_86tfc"]
+
+[node name="screen_shaders" type="HBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_86tfc")
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 2
+auto_width = true
+auto_height = true
+item_count = 3
+item_0/text = "dsdasfdsdfs45354353"
+item_1/text = "fsdfsdfsfsf"
+item_2/text = "fswr23r2r23"
+
+[node name="DemoImage" type="ColorRect" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
