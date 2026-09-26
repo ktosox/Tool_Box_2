@@ -17,3 +17,41 @@ text = "The goal: have a cool pixelization shader
 The path: collect examples attempt re-creation based on resreach
 
 Status: got nothing atm"
+
+[node name="Label2" type="Label" parent="." unique_id=1362271440]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 253.0
+offset_right = 438.0
+offset_bottom = 328.0
+text = "Target 1:
+Implemented various screen space smoothing shaders
+Gaussian smoothing
+Median filter
+Kuwahara filter
+Bilateral filter
+"
+
+[node name="Label3" type="Label" parent="." unique_id=1243372995]
+layout_mode = 0
+offset_left = 530.0
+offset_top = 241.0
+offset_right = 825.0
+offset_bottom = 316.0
+text = "Target 2:
+
+Implement texel splating from scratch
+
+Cube Map projection is step 1
+Followed by Texel splatting"
+
+[node name="Label4" type="Label" parent="." unique_id=116932640]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 465.0
+offset_right = 344.0
+offset_bottom = 566.0
+text = "Target 3:
+
+Processing creases and edges
+Automated jaggies removal? Is it possible?"
