@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://coi1w5fo8xi5j"]
 
-[ext_resource type="Script" uid="uid://bqao58ce2thks" path="res://texel_splating/camera_3d.gd" id="1_0g01v"]
+[ext_resource type="PackedScene" uid="uid://mum4bphehusy" path="res://controllers/Simple_3D_camera/camera_3d.tscn" id="1_0g01v"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3o2bq"]
 
@@ -53,14 +53,10 @@ mesh = SubResource("BoxMesh_1qhx3")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.261503, 1.033807, -5.8436317)
 mesh = SubResource("BoxMesh_1qhx3")
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1412503050]
+[node name="Camera3D" parent="." unique_id=949843328 instance=ExtResource("1_0g01v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5999475, 0)
-script = ExtResource("1_0g01v")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="Camera3D" unique_id=2034930239]
-light_color = Color(1, 0.5882353, 0.36078432, 1)
-omni_range = 9.0
-omni_attenuation = 0.7
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=22144027]
 environment = SubResource("Environment_1qhx3")
+
+[editable path="Camera3D"]

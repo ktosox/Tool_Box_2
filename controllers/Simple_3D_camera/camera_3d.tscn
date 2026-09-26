@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://mum4bphehusy"]
+
+[ext_resource type="Script" uid="uid://bqao58ce2thks" path="res://controllers/Simple_3D_camera/camera_3d.gd" id="1_j355n"]
+
+[node name="Node3D" type="Node3D" unique_id=818890340]
+script = ExtResource("1_j355n")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=949843328]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Camera3D" unique_id=1531840356]
+light_color = Color(1, 0.5882353, 0.36078432, 1)
+omni_range = 9.0
+omni_attenuation = 0.7
