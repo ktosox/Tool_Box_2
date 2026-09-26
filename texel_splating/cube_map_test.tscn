@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://coi1w5fo8xi5j"]
+
+[ext_resource type="Script" uid="uid://bqao58ce2thks" path="res://texel_splating/camera_3d.gd" id="1_0g01v"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3o2bq"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_aobkh"]
+material = SubResource("StandardMaterial3D_3o2bq")
+size = Vector2(50, 50)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0g01v"]
+albedo_color = Color(0.8365366, 0.87675166, 0.28871465, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1qhx3"]
+material = SubResource("StandardMaterial3D_0g01v")
+size = Vector3(2, 2, 2)
+
+[sub_resource type="Environment" id="Environment_1qhx3"]
+background_mode = 1
+background_color = Color(0.48983365, 0.6540257, 1, 1)
+background_energy_multiplier = 0.25
+
+[node name="CubeMapTest" type="Node3D" unique_id=1236355278]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1119178023]
+mesh = SubResource("PlaneMesh_aobkh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D" unique_id=1422814650]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.16725, 1.033807, -11.759851)
+mesh = SubResource("BoxMesh_1qhx3")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D" unique_id=82743741]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.417385, 1.033807, -19.921383)
+mesh = SubResource("BoxMesh_1qhx3")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="MeshInstance3D" unique_id=1185187007]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.417385, 1.033807, 11.628326)
+mesh = SubResource("BoxMesh_1qhx3")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="MeshInstance3D" unique_id=713454068]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.26408, 1.033807, 17.852303)
+mesh = SubResource("BoxMesh_1qhx3")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="MeshInstance3D" unique_id=55510898]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0269604, 1.033807, 11.074272)
+mesh = SubResource("BoxMesh_1qhx3")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="MeshInstance3D" unique_id=924426780]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0269604, 1.033807, -23.390682)
+mesh = SubResource("BoxMesh_1qhx3")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="MeshInstance3D" unique_id=1822077346]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.261503, 1.033807, -5.8436317)
+mesh = SubResource("BoxMesh_1qhx3")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1412503050]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5999475, 0)
+script = ExtResource("1_0g01v")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Camera3D" unique_id=2034930239]
+light_color = Color(1, 0.5882353, 0.36078432, 1)
+omni_range = 9.0
+omni_attenuation = 0.7
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=22144027]
+environment = SubResource("Environment_1qhx3")
