@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://d3rbhoqf4y12q"]
+
+[ext_resource type="Shader" uid="uid://bjcb4260lnipi" path="res://screen_shaders/kuwahara_shader.gdshader" id="1_cvbar"]
+[ext_resource type="Texture2D" uid="uid://d11ofdafmrw2k" path="res://resources/shader_particles/smoke2.png" id="1_gd3ax"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_27717"]
+noise_type = 2
+seed = 78
+frequency = 0.0292
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_27717"]
+width = 1280
+height = 720
+noise = SubResource("FastNoiseLite_27717")
+
+[sub_resource type="Curve" id="Curve_t8s8a"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.5331491, 0.23776227), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_gd3ax"]
+curve = SubResource("Curve_t8s8a")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_cvbar"]
+lifetime_randomness = 0.18
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(600, 300, 1)
+gravity = Vector3(0, 0, 0)
+linear_accel_min = -8.1500025
+linear_accel_max = 51.159996
+radial_accel_min = -2.2351742e-06
+radial_accel_max = 26.739998
+tangential_accel_min = -10.470002
+tangential_accel_max = 7.9499974
+scale_curve = SubResource("CurveTexture_gd3ax")
+hue_variation_min = -0.3
+hue_variation_max = 0.40999997
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_27717"]
+shader = ExtResource("1_cvbar")
+shader_parameter/radius = 4
+shader_parameter/offset = Vector3(0, 0, 0)
+
+[node name="ScreenShaderHolder" type="Control" unique_id=1317433693]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundImage" type="TextureRect" parent="." unique_id=2045283570]
+modulate = Color(1, 0.25882354, 0.23921569, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("NoiseTexture2D_27717")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1216872097]
+position = Vector2(646, 189)
+amount = 10
+texture = ExtResource("1_gd3ax")
+lifetime = 3.0
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_cvbar")
+
+[node name="KuwaharaShader" type="ColorRect" parent="." unique_id=1621722429]
+material = SubResource("ShaderMaterial_27717")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
