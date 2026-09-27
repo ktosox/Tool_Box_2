@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://coi1w5fo8xi5j"]
 
 [ext_resource type="PackedScene" uid="uid://mum4bphehusy" path="res://controllers/Simple_3D_camera/camera_3d.tscn" id="1_0g01v"]
+[ext_resource type="PackedScene" uid="uid://cishxa7amhgyf" path="res://texel_splating/wish_cube_scene.tscn" id="2_bvegs"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3o2bq"]
 
@@ -55,6 +56,10 @@ mesh = SubResource("BoxMesh_1qhx3")
 
 [node name="Camera3D" parent="." unique_id=949843328 instance=ExtResource("1_0g01v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5999475, 0)
+
+[node name="MeshInstance3D2" parent="Camera3D" unique_id=1476211215 instance=ExtResource("2_bvegs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+skeleton = NodePath("../..")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=22144027]
 environment = SubResource("Environment_1qhx3")

@@ -41,7 +41,9 @@ func update_position(delta: float) -> void:
 func rotate_camera(delta):
 	var dx = -delta.x * sensitivity
 	var dy = -delta.y * sensitivity
+	var old_rot = rotation.y
 	rotate_y(dx) # apply yaw on this node
+	$MeshInstance3D2.rotation.y = old_rot
 	pitch += dy
 	pitch = clamp(pitch, deg_to_rad(-pitch_limit), deg_to_rad(pitch_limit))
 	$Camera3D.rotation.x = pitch

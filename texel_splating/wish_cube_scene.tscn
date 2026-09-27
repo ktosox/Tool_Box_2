@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://cishxa7amhgyf"]
+
+[ext_resource type="Cubemap" uid="uid://dly7ldsgata55" path="res://texel_splating/cubemap.tres" id="1_ugl58"]
+
+[sub_resource type="Shader" id="Shader_j5xp1"]
+code = "
+shader_type spatial;
+render_mode unshaded, cull_back;
+
+uniform vec4 albedo : source_color;
+uniform ivec2 albedo_texture_size;
+uniform float point_size : hint_range(0.1, 128.0, 0.1);
+
+uniform vec3 uv1_scale;
+uniform vec3 uv1_offset;
+
+uniform samplerCube source_panorama : filter_linear, source_color, hint_default_black;
+
+varying vec3 some_color;
+
+void vertex() {
+	//UV = UV * uv1_scale.xy + uv1_offset.xy;
+	if(NORMAL.r > 0.0)
+	{some_color.r = NORMAL.r ;}
+	else
+	{some_color.r = -NORMAL.r * 0.5;}
+	if(NORMAL.g > 0.0)
+	{some_color.g = NORMAL.g ;}
+	else
+	{some_color.g= -NORMAL.g * 0.5;}
+	if(NORMAL.b > 0.0)
+	{some_color.b = NORMAL.b ;}
+	else
+	{some_color.b= -NORMAL.b * 0.5;}
+	 //= (NORMAL * uv1_scale) + uv1_offset;
+	//if (NORMAL.y == 0.0)
+	//{some_color.g = 1.0;}
+
+	
+}
+
+void fragment() {
+	 
+	//vec4 albedo_tex = texture(source_panorama, NORMAL);
+	//ALBEDO = albedo.rgb * albedo_tex.rgb;
+	
+	ALBEDO = some_color;
+
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wudg7"]
+render_priority = 0
+shader = SubResource("Shader_j5xp1")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/albedo_texture_size = Vector2i(0, 0)
+shader_parameter/point_size = 0.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/source_panorama = ExtResource("1_ugl58")
+
+[sub_resource type="BoxMesh" id="BoxMesh_aobkh"]
+material = SubResource("ShaderMaterial_wudg7")
+flip_faces = true
+size = Vector3(8, 8, 8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" unique_id=1476211215]
+transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
+mesh = SubResource("BoxMesh_aobkh")
