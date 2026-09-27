@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://dreunffriv8wo"]
+
+[ext_resource type="Script" uid="uid://ba017vqnm70yy" path="res://texel_splating/test_static_cube_map.gd" id="1_wudg7"]
+[ext_resource type="Cubemap" path="res://texel_splating/cubemap.tres" id="3_pqt1x"]
+
+[sub_resource type="Environment" id="Environment_ieuoy"]
+background_mode = 1
+background_color = Color(0.7411765, 0.7490196, 0, 1)
+
+[sub_resource type="Shader" id="Shader_j5xp1"]
+code = "
+shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_burley, specular_schlick_ggx;
+
+uniform vec4 albedo : source_color;
+uniform sampler2D texture_albedo : source_color, filter_linear_mipmap, repeat_enable;
+uniform ivec2 albedo_texture_size;
+uniform float point_size : hint_range(0.1, 128.0, 0.1);
+
+uniform float roughness : hint_range(0.0, 1.0);
+uniform sampler2D texture_metallic : hint_default_white, filter_linear_mipmap, repeat_enable;
+uniform vec4 metallic_texture_channel;
+uniform sampler2D texture_roughness : hint_roughness_r, filter_linear_mipmap, repeat_enable;
+
+uniform float specular : hint_range(0.0, 1.0, 0.01);
+uniform float metallic : hint_range(0.0, 1.0, 0.01);
+
+uniform vec3 uv1_scale;
+uniform vec3 uv1_offset;
+uniform vec3 uv2_scale;
+uniform vec3 uv2_offset;
+
+uniform samplerCube source_panorama : filter_linear, source_color, hint_default_black;
+
+
+void vertex() {
+	UV = UV * uv1_scale.xy + uv1_offset.xy;
+}
+
+void fragment() {
+	vec2 base_uv = UV;
+
+	vec4 albedo_tex = texture(source_panorama, vec3(base_uv,0.5));
+	ALBEDO = albedo.rgb * albedo_tex.rgb;
+
+	float metallic_tex = dot(texture(texture_metallic, base_uv), metallic_texture_channel);
+	METALLIC = metallic_tex * metallic;
+	SPECULAR = specular;
+
+	vec4 roughness_texture_channel = vec4(1.0, 0.0, 0.0, 0.0);
+	float roughness_tex = dot(texture(texture_roughness, base_uv), roughness_texture_channel);
+	ROUGHNESS = roughness_tex * roughness;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wudg7"]
+render_priority = 0
+shader = SubResource("Shader_j5xp1")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/albedo_texture_size = Vector2i(0, 0)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/source_panorama = ExtResource("3_pqt1x")
+
+[sub_resource type="BoxMesh" id="BoxMesh_aobkh"]
+material = SubResource("ShaderMaterial_wudg7")
+
+[node name="TestStaticCubeMap" type="Camera3D" unique_id=1258577101]
+environment = SubResource("Environment_ieuoy")
+script = ExtResource("1_wudg7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1163857149]
+transform = Transform3D(1, 0, 0, 0, 0.9729412, 0.23105279, 0, -0.23105279, 0.9729412, 0, 0, -1.9331446)
+mesh = SubResource("BoxMesh_aobkh")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=361376172]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.235721, 0)
+omni_range = 20.0
