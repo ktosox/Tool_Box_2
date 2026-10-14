@@ -24,6 +24,44 @@ albedo_color = Color(0.92086035, 0.71303165, 0.8698244, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_1qhx3"]
 material = SubResource("StandardMaterial3D_aobkh")
 
+[sub_resource type="Animation" id="Animation_5gtuu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.847095, 0.7610662, -1.4431083)]
+}
+
+[sub_resource type="Animation" id="Animation_agvcb"]
+resource_name = "new_animation"
+length = 8.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.95, 5.32),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector3(-0.847095, 0.7610662, -1.4431083), Vector3(-2.348, -0.255, -1.916), Vector3(-2.0526142, 1.0828855, 0.16545832)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6nfdq"]
+_data = {
+&"RESET": SubResource("Animation_5gtuu"),
+&"new_animation": SubResource("Animation_agvcb")
+}
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vq4ux"]
 albedo_color = Color(0.68536043, 0.8610871, 0.37573478, 1)
 
@@ -44,6 +82,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0009999999),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.289726, 0.7610662, 0.4756515)]
+}
 
 [sub_resource type="Animation" id="Animation_w77ug"]
 resource_name = "new_animation"
@@ -61,6 +111,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(0, 2.7925267, 0), Vector3(0, -1.5707964, 0), Vector3(0, 0, 0)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1.29, 0, 0.476), Vector3(1.29, 1.516, 0.476)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5gtuu"]
 _data = {
@@ -73,6 +135,48 @@ background_mode = 1
 background_color = Color(1, 1, 1, 1)
 ambient_light_color = Color(1, 1, 1, 1)
 
+[sub_resource type="SphereMesh" id="SphereMesh_1qhx3"]
+radial_segments = 4
+rings = 4
+
+[sub_resource type="Animation" id="Animation_7fod7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_dbh5v"]
+resource_name = "new_animation"
+length = 20.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 6.43, 10.652571, 16.60257),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.6457718, 1.6144296, 1.6580628), Vector3(-2.6441739, 4.3231807, 0.39095375), Vector3(3.3248522, 1.9111356, -3.1450834)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mxk0s"]
+_data = {
+&"RESET": SubResource("Animation_7fod7"),
+&"new_animation": SubResource("Animation_dbh5v")
+}
+
 [node name="PixelEdge3DSource" type="Node3D" unique_id=1817955846]
 
 [node name="Floor" type="MeshInstance3D" parent="." unique_id=1883540429]
@@ -81,13 +185,17 @@ mesh = SubResource("PlaneMesh_aobkh")
 [node name="Camera3D" type="Camera3D" parent="." unique_id=285513298]
 transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 2, 2)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D" unique_id=828639293]
+[node name="ShaderCodeGoesHere" type="MeshInstance3D" parent="Camera3D" unique_id=828639293]
 extra_cull_margin = 16384.0
 mesh = SubResource("QuadMesh_1qhx3")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=643083225]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.847095, 0.7610662, -1.4431083)
 mesh = SubResource("BoxMesh_1qhx3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MeshInstance3D" unique_id=375849820]
+libraries/ = SubResource("AnimationLibrary_6nfdq")
+autoplay = &"new_animation"
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=817072774]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.289726, 0.7610662, 0.4756515)
@@ -99,3 +207,11 @@ autoplay = &"new_animation"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2120822816]
 environment = SubResource("Environment_1qhx3")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=553117793]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4733355, 0.64709806, 0.9031693)
+mesh = SubResource("SphereMesh_1qhx3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MeshInstance3D3" unique_id=209638754]
+libraries/ = SubResource("AnimationLibrary_mxk0s")
+autoplay = &"new_animation"
